@@ -343,3 +343,208 @@ body.enhanced .scene[data-scene="6"] .loop-detail{margin-top:0;font-size:11.5px;
 .case-highlight{margin-top:30px!important}
 .case-two-col .case-section{margin-top:0}
 .case-prompts li{margin:5px 0}
+
+/* ============================================================
+   READABILITY PASS (v1.2)
+   Projection-lecture baseline: labels >= 11px, body >= 14px,
+   secondary text contrast >= 4.5:1. Applied as a high-specificity
+   override layer so it wins over both styles.css and earlier rules.
+   ============================================================ */
+
+/* --- tokens used by small orange labels --- */
+body.enhanced{--orange-ink:#b83c18}
+
+/* --- global label / meta text --- */
+body.enhanced .mono,
+body.enhanced .eyebrow{font-size:12px}
+body.enhanced .eyebrow{color:var(--orange-ink)}
+body.enhanced .topbar .brand-text span{font-size:11px;opacity:.85}
+body.enhanced .topbar .nav-btn{font-size:11px}
+body.enhanced .topbar .nav-btn kbd{font-size:10px;opacity:.8}
+body.enhanced .scene-sub{font-size:clamp(12px,1vw,14px)}
+body.enhanced .body{font-size:clamp(14px,1.2vw,18px)}
+body.enhanced .lead{font-size:clamp(16px,1.5vw,23px)}
+body.enhanced .hud .left,body.enhanced .hud .right{font-size:11px;opacity:.9}
+body.enhanced .scene-dock .title{font-size:12px}
+body.enhanced .scene-rail button{font-size:10px}
+
+/* --- scene 0 · hero --- */
+body.enhanced .hero-kicker span{font-size:12px}
+body.enhanced .hero-sub{font-size:clamp(14px,1.2vw,18px)}
+body.enhanced .hero-desc{font-size:clamp(15px,1.25vw,19px)}
+body.enhanced .hero-foot{font-size:12px;color:rgba(245,241,232,.8)}
+body.enhanced .hero-spec{font-size:11px;color:rgba(245,241,232,.72)}
+body.enhanced .hero-index{font-size:11px;color:rgba(245,241,232,.72)}
+body.enhanced .hero-index b{font-size:clamp(48px,5vw,72px)}
+
+/* --- scene 1 · course map --- */
+body.enhanced .tree-root .num{font-size:12px;color:var(--orange-ink)}
+body.enhanced .tree-root p{font-size:15px}
+body.enhanced .branch .mono{font-size:11px;color:var(--orange-ink)}
+body.enhanced .branch p{font-size:14px;color:var(--ink-soft)}
+body.enhanced .session-card .no{font-size:12px;color:var(--orange-ink)}
+body.enhanced .session-card .time{font-size:11px}
+body.enhanced .session-card p{font-size:14px}
+body.enhanced .session-card .arrow{font-size:12px;color:var(--orange-ink)}
+
+/* --- scene 2 · flip cards --- */
+body.enhanced .flip-card .idx{font-size:12px;color:var(--orange-ink)}
+body.enhanced .flip-card .sub{font-size:13px}
+body.enhanced .flip-back p{font-size:14px}
+body.enhanced .flip-hint{font-size:11px}
+body.enhanced .flip-card.is-flipped .flip-hint{color:rgba(255,255,255,.85)}
+body.enhanced .opening-foot .counter{font-size:12px;color:var(--orange-ink)}
+
+/* --- scene 3 · manufacturing lens --- */
+body.enhanced .lens-visual .tag{font-size:11px}
+body.enhanced .lens-body .model{font-size:11px}
+body.enhanced .lens-tab{font-size:11px}
+body.enhanced .lens-copy{font-size:14px;min-height:4.4em}
+body.enhanced .lens-quote{font-size:clamp(17px,1.5vw,21px)}
+
+/* --- scene 4 · definition --- */
+body.enhanced .def-sub{font-size:clamp(14px,1.2vw,18px);color:rgba(245,241,232,.85)}
+body.enhanced .element-tile .no{font-size:11px}
+body.enhanced .element-tile p{font-size:14px;color:rgba(245,241,232,.82)}
+body.enhanced .chip{font-size:11.5px;color:rgba(245,241,232,.85)}
+
+/* --- scene 5 · demo --- */
+body.enhanced .demo-head{font-size:11px;color:rgba(245,241,232,.8)}
+body.enhanced .demo-log{font-size:14px}
+body.enhanced .demo-line .tag{font-size:11px}
+body.enhanced .demo-note{font-size:11px;color:rgba(245,241,232,.72)}
+body.enhanced .btn{font-size:11.5px}
+body.enhanced .hero-start{font-size:11.5px}
+
+/* --- scene 6 · layers / loop --- */
+body.enhanced .layer .n{font-size:12px}
+body.enhanced .layer .en{font-size:11px}
+body.enhanced .layer-detail{font-size:14px}
+body.enhanced .loop-detail{font-size:14px}
+
+/* --- scene 7 · case wall --- */
+body.enhanced .timeline .year-node{font-size:11px}
+body.enhanced .filter{font-size:11px}
+body.enhanced .case-card .year,body.enhanced .case-card .cat{font-size:10.5px}
+body.enhanced .case-card p{font-size:13px;color:rgba(245,241,232,.9)}
+body.enhanced .case-card .open{font-size:11px;color:#ffb59c}
+body.enhanced .casewall-foot .hint{font-size:11px}
+
+/* --- scene 8 · mapping + DUSTGUARD --- */
+body.enhanced .map-item{font-size:13.5px}
+body.enhanced .map-item .k{font-size:10.5px;color:var(--orange-ink)}
+body.enhanced .dustguard-strip .eyebrow{font-size:11px}
+body.enhanced .dustguard-strip p{font-size:13px;color:rgba(245,241,232,.88)}
+body.enhanced .dustguard-strip .mini-stats span{font-size:10.5px;color:rgba(245,241,232,.82)}
+body.enhanced .play-badge{font-size:10.5px}
+
+/* --- scene 9 · industry --- */
+body.enhanced .chain-card .no{font-size:11px;color:var(--orange-ink)}
+body.enhanced .chain-card p{font-size:13.5px}
+body.enhanced .chain-card.is-here::after{font-size:9.5px}
+body.enhanced .smile-caption{font-size:11px}
+body.enhanced .industry-note{font-size:14px}
+
+/* --- scene 10 · summary --- */
+body.enhanced .summary-row .n{font-size:12px}
+body.enhanced .homework .label{font-size:11px}
+body.enhanced .homework p{font-size:14px}
+body.enhanced .homework .next{font-size:11.5px;color:rgba(245,241,232,.8)}
+body.enhanced .end-mark{font-size:11px;color:rgba(245,241,232,.72)}
+
+/* --- case library & detail sheet --- */
+body.enhanced .library-count,body.enhanced .lib-card .year{font-size:11px}
+body.enhanced .lib-card .cat{font-size:10.5px}
+body.enhanced .lib-card p{font-size:13px}
+body.enhanced .lib-card .open{font-size:11px}
+body.enhanced .search{font-size:14px}
+body.enhanced .case-sheet__kicker,body.enhanced .case-counter,
+body.enhanced .case-nav-btn,body.enhanced .tower-close{font-size:11px}
+body.enhanced .case-label{font-size:11px;color:var(--orange-ink)}
+body.enhanced .case-para{font-size:15px}
+body.enhanced .case-para--small{font-size:14px}
+body.enhanced .how-text{font-size:14px}
+body.enhanced .how-no,body.enhanced .design-no{font-size:11px}
+body.enhanced .design-card p{font-size:14px}
+body.enhanced .case-highlight .case-para{font-size:16px}
+body.enhanced .case-tag{font-size:10.5px}
+body.enhanced .case-source{font-size:11.5px}
+body.enhanced .case-prompts{font-size:14px}
+body.enhanced .case-related-btn{font-size:13px}
+body.enhanced .case-related-btn em{font-size:10.5px}
+body.enhanced .tower-note{font-size:12px;color:rgba(245,241,232,.8)}
+body.enhanced .tower-hint{font-size:11px;color:rgba(245,241,232,.78)}
+body.enhanced .tower-panel .eyebrow{font-size:11px}
+body.enhanced .tower-no{font-size:12px}
+body.enhanced .tower-buttons button{font-size:11px}
+body.enhanced .cmdk-item{font-size:14px}
+body.enhanced .cmdk-item .k,body.enhanced .cmdk-item .s{font-size:11px}
+body.enhanced .cmdk-input{font-size:16px}
+body.enhanced .cmdk-head span,body.enhanced .cmdk-hint{font-size:11px}
+body.enhanced .ov-card p{font-size:12px}
+body.enhanced .notes-k,body.enhanced .notes-body .k{font-size:11px}
+body.enhanced .notes-body{font-size:14px}
+
+/* --- 3D overlay panels --- */
+body.enhanced .tower-head .mono{font-size:11px}
+body.enhanced .tower-panel p{font-size:14px;color:rgba(245,241,232,.88)}
+body.enhanced .tower-panel .eyebrow{font-size:11px}
+body.enhanced .tower-panel h1{font-size:clamp(44px,5vw,78px)}
+
+/* Scene 3: after the readability pass, quotes slipped under the bottom dock.
+   Compact the card so the quote clears the dock (736px at 1280x800). */
+body.enhanced .scene[data-scene="3"] .section-head{margin-bottom:14px}
+body.enhanced .scene[data-scene="3"] .lens-visual{height:150px;min-height:150px}
+body.enhanced .scene[data-scene="3"] .lens-body{padding:15px 18px}
+body.enhanced .scene[data-scene="3"] .lens-tabs{margin:8px 0 6px}
+body.enhanced .scene[data-scene="3"] .lens-copy{min-height:3.2em}
+body.enhanced .scene[data-scene="3"] .lens-quote{padding-top:6px}
+
+/* --- dark overlays: light-on-dark contrast fixes --- */
+/* library overlay */
+body.enhanced #libraryFilters .filter{color:rgba(245,241,232,.85);border-color:rgba(255,255,255,.32)}
+body.enhanced #libraryFilters .filter:hover,
+body.enhanced #libraryFilters .filter.is-active{color:#fff;border-color:var(--orange)}
+body.enhanced #librarySearch{color:#f6f2e9}
+body.enhanced #librarySearch::placeholder{color:rgba(245,241,232,.6)}
+body.enhanced .lib-card p{color:rgba(245,241,232,.82)}
+body.enhanced .lib-card .open{color:#ffb59c}
+body.enhanced .lib-card .cat{color:rgba(245,241,232,.85)}
+body.enhanced .library-count{color:rgba(245,241,232,.78)}
+/* command palette */
+body.enhanced .cmdk-item .k{color:#f0a58e}
+body.enhanced .cmdk-item .s{color:rgba(245,241,232,.65)}
+body.enhanced .cmdk-empty{color:rgba(245,241,232,.75)}
+/* 3D overlays: eyebrow uses the dark-scene bright orange */
+body.enhanced .tower-overlay .eyebrow,
+body.enhanced .tower-overlay .case-label{color:#f0a58e}
+body.enhanced .tower-panel .eyebrow{color:#f0a58e}
+/* light case-sheet / notes drawer keep the dark orange */
+body.enhanced .case-counter,
+body.enhanced .case-sheet__kicker{color:var(--ink-soft)}
+body.enhanced .notes-body .k{color:var(--orange-ink)}
+
+/* final small-text weight / overlay header */
+body.enhanced .lib-card .open{font-size:12px;font-weight:600}
+body.enhanced .case-card .open{font-size:11.5px;font-weight:600}
+body.enhanced .overlay-head .sub{font-size:11px;color:rgba(245,241,232,.78)}
+body.enhanced .overlay-close{font-size:11px;color:#f6f2e9}
+body.enhanced .overlay-head h2{font-size:clamp(26px,2.8vw,38px)}
+body.enhanced .glossary-item p{font-size:14px}
+body.enhanced .case-placeholder{color:rgba(245,241,232,.7)}
+
+/* raise the last 10-10.5px badges/decorative labels to 11px */
+body.enhanced .case-card .year,body.enhanced .case-card .cat,
+body.enhanced .lib-card .cat,body.enhanced .lib-card .year,
+body.enhanced .map-item .k,body.enhanced .play-badge,
+body.enhanced .dustguard-strip .mini-stats span,
+body.enhanced .case-tag,body.enhanced .case-related-btn em,
+body.enhanced .topbar .nav-btn kbd,body.enhanced .scene-rail button,
+body.enhanced .cmdk-item .k,body.enhanced .cmdk-item .s{font-size:11px}
+body.enhanced .demo-divider span{font-size:12px}
+/* SVG drawing annotations are decorative, but lift them off 8px */
+body.enhanced .hero-visual svg text{font-size:11px;fill:rgba(245,241,232,.6)}
+body.enhanced .smile-box svg text{font-size:11px}
+body.enhanced .tower-buttons button{color:rgba(245,241,232,.82)}
+body.enhanced .tower-buttons button span{color:rgba(245,241,232,.65)}
+body.enhanced .tower-buttons button.is-active span{color:var(--cyan)}

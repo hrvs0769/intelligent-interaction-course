@@ -19,8 +19,8 @@ cd course-site
 python3 publish.py "更新案例内容"
 ```
 
-在可正常访问 `github.com` 的网络里，直接 `git push origin main` 也可以。
-两种方式都会触发 Pages 自动重建。
+也可以 `git clone` 该仓库后，在可正常访问 `github.com` 的网络里用 `git push` 更新。
+两种方式都会触发 Pages 自动重建（本机已不使用本地 git 仓库，发布统一走 `publish.py`）。
 
 ## 本地打开方式
 
