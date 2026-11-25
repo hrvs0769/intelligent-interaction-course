@@ -504,9 +504,9 @@
         if (a === "notes-close") toggleNotes(false);
         if (a === "fullscreen") toggleFullscreen();
         if (a === "start") goTo(1);
-        if (a === "tower") window.dispatchEvent(new Event("open-tower"));
-        if (a === "explode") window.dispatchEvent(new Event("open-explode"));
-        if (a === "corridor") window.dispatchEvent(new Event("open-corridor"));
+        if (a === "tower") window.open3D && window.open3D("tower");
+        if (a === "explode") window.open3D && window.open3D("explode");
+        if (a === "corridor") window.open3D && window.open3D("corridor");
         if (a === "close") closeAllOverlays();
         if (a === "case-close") closeCase();
         return;
