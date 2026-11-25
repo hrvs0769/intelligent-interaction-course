@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#2F7F88" stop-opacity=".92"/>
+    <stop offset="1" stop-color="#071214"/>
+  </linearGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="640" height="360" fill="url(#bg)"/>
+<rect width="640" height="360" fill="url(#grid)" opacity=".8"/>
+<rect x="20" y="20" width="600" height="320" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+<text x="38" y="48" font-family="Menlo, monospace" font-size="11" letter-spacing="2" fill="#8DE3F2">C018 / CASE</text>
+<text x="38" y="68" font-family="Menlo, monospace" font-size="9" letter-spacing="1" fill="rgba(255,255,255,.52)">2024 · C 输入与步骤</text>
+<g transform="translate(245,55)"><rect x="104" y="58" width="104" height="170" rx="18" fill="none" stroke="#8DE3F2" stroke-width="2.2"/>
+        <circle cx="156" cy="143" r="95" fill="none" stroke="#E4572E" stroke-width="1.2" opacity=".75"/>
+        <circle cx="156" cy="143" r="66" fill="none" stroke="#8DE3F2" stroke-width="1.2" opacity=".55"/>
+        <circle cx="156" cy="143" r="9" fill="#E4572E"/></g>
+<text x="600" y="315" text-anchor="end" font-family="Arial Black, Arial, sans-serif" font-size="168" font-weight="900" fill="rgba(255,255,255,.10)">C</text>
+<text x="40" y="315" font-family="Menlo, monospace" font-size="10" letter-spacing="1.5" fill="#8DE3F2">SCHEMATIC / CASE LIBRARY</text>
+<circle cx="590" cy="44" r="4" fill="#E4572E"/>
+</svg>

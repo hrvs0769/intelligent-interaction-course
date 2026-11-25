@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>智能交互与设计｜制造美学下的产业思维</title>
+<meta name="description" content="《智能交互与设计》课程网站：制造美学下的产业思维 · 企业导师课 · 第一讲">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/enhance.css">
+</head>
+<body>
+
+<div class="progress-bar"><i id="progressFill"></i></div>
+
+<header class="topbar" id="topbar">
+  <div class="brand">
+    <div class="brand-mark">MI</div>
+    <div class="brand-text">
+      <strong>智能交互与设计</strong>
+      <span>制造美学下的产业思维 / 第一讲</span>
+    </div>
+  </div>
+  <nav class="topnav">
+    <button class="nav-btn" data-action="library">案例库 <kbd>C</kbd></button>
+    <button class="nav-btn" data-action="glossary">术语 <kbd>G</kbd></button>
+    <button class="nav-btn" data-action="overview">总览 <kbd>O</kbd></button>
+    <button class="nav-btn" data-action="notes">备注 <kbd>P</kbd></button>
+    <button class="nav-btn" data-action="fullscreen">全屏 <kbd>F</kbd></button>
+  </nav>
+</header>
+
+<main id="stage">
+
+  <!-- ============================================================
+       SCENE 0 · HERO
+       ============================================================ -->
+  <section class="scene scene--dark hero" data-scene="0" data-theme="dark" data-title="封面">
+    <div class="scene__inner">
+      <div class="hero-copy">
+        <div class="hero-kicker" data-reveal><span class="line"></span><span>制造美学下的产业思维 · 企业导师课 · 第一讲</span></div>
+        <h1 class="hero-title" data-reveal data-delay="1"><span class="line">智能交互</span><span class="line"><span class="accent">与</span>设计</span></h1>
+        <div class="hero-sub" data-reveal data-delay="2">从制造美学到智能交互</div>
+        <p class="hero-desc" data-reveal data-delay="3">制造美学是根，智能交互是枝，<b>设计</b>是连接两者的语言。<br>今天我们不背名词，只建立一套能判断、能落笔的框架。</p>
+        <div class="hero-foot" data-reveal data-delay="4">
+          <span><i class="pulse"></i> 90 分钟 · 2 学时</span>
+          <button class="btn hero-start" type="button" data-action="start">开始听课 <span>→</span></button>
+        </div>
+      </div>
+      <div class="hero-visual" data-reveal data-delay="2">
+        <svg viewBox="0 0 760 760" aria-hidden="true">
+          <defs>
+            <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#7f9cb3"/>
+              <stop offset=".28" stop-color="#263b4d"/>
+              <stop offset=".5" stop-color="#a9c2d8"/>
+              <stop offset=".72" stop-color="#1b2a38"/>
+              <stop offset="1" stop-color="#5c778d"/>
+            </linearGradient>
+            <radialGradient id="core" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#8de3f2" stop-opacity=".25"/>
+              <stop offset="1" stop-color="#8de3f2" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+          </defs>
+          <circle cx="380" cy="380" r="245" fill="url(#core)" opacity=".8"/>
+          <g class="spin-slow" style="transform-origin:380px 380px">
+            <circle cx="380" cy="380" r="318" fill="none" stroke="rgba(141,227,242,.28)" stroke-width="1" stroke-dasharray="2 12"/>
+            <circle cx="380" cy="380" r="286" fill="none" stroke="rgba(141,227,242,.12)" stroke-width="1"/>
+            <circle cx="380" cy="380" r="225" fill="none" stroke="rgba(141,227,242,.35)" stroke-width="1" stroke-dasharray="3 9"/>
+          </g>
+          <g opacity=".8">
+            <rect x="249" y="88" width="262" height="584" rx="38" fill="none" stroke="rgba(141,227,242,.26)" stroke-width="1.2" transform="rotate(-10 380 380)"/>
+            <line x1="380" y1="88" x2="380" y2="672" stroke="rgba(228,87,46,.45)" stroke-width="1" stroke-dasharray="3 7" transform="rotate(-10 380 380)"/>
+            <rect x="262" y="102" width="236" height="556" rx="30" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="1" transform="rotate(-10 380 380)"/>
+          </g>
+          <circle cx="380" cy="380" r="168" fill="none" stroke="url(#metal)" stroke-width="30" opacity=".92"/>
+          <circle cx="380" cy="380" r="146" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1"/>
+          <circle cx="380" cy="380" r="124" fill="#0a0f16" stroke="rgba(141,227,242,.28)" stroke-width="1"/>
+          <circle cx="380" cy="380" r="88" fill="none" stroke="url(#metal)" stroke-width="18" opacity=".85"/>
+          <circle cx="380" cy="380" r="58" fill="#0a0f16" stroke="rgba(255,255,255,.16)" stroke-width="1"/>
+          <circle cx="380" cy="380" r="22" fill="none" stroke="#8de3f2" stroke-width="1.2" opacity=".8"/>
+          <circle cx="380" cy="380" r="5" fill="#8de3f2" filter="url(#glow)"/>
+          <g fill="#9fb5c5" opacity=".8">
+            <circle cx="380" cy="247" r="5"/><circle cx="474" cy="307" r="5"/><circle cx="474" cy="453" r="5"/>
+            <circle cx="380" cy="513" r="5"/><circle cx="286" cy="453" r="5"/><circle cx="286" cy="307" r="5"/>
+          </g>
+          <g stroke="rgba(141,227,242,.35)" stroke-width="1">
+            <path d="M56 380h-32M704 380h32M380 56V24M380 704v32"/>
+            <path d="M96 380h18M646 380h18"/>
+          </g>
+          <g fill="rgba(245,241,232,.45)" font-family="SFMono-Regular,monospace" font-size="9" letter-spacing="2">
+            <text x="18" y="368">Ø 336.00</text>
+            <text x="620" y="368">MATERIAL</text>
+            <text x="620" y="382">AL-6061</text>
+            <text x="300" y="735">HINGE ASSEMBLY / 01</text>
+            <text x="586" y="112">CNC / ANODIZED</text>
+          </g>
+          <g stroke="rgba(228,87,46,.72)" stroke-width="1">
+            <path d="M380 164v-34M380 596v34M164 380h-34M596 380h34"/>
+          </g>
+          <g fill="#e4572e" font-family="SFMono-Regular,monospace" font-size="8" letter-spacing="1.5">
+            <text x="392" y="140">DAMPING</text>
+            <text x="392" y="616">KNURLING</text>
+          </g>
+        </svg>
+        <div class="hero-index"><b>01</b> / 11</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCENE 1 · COURSE MAP
+       ============================================================ -->
+  <section class="scene scene--light" data-scene="1" data-theme="light" data-title="课程地图">
+    <div class="scene__inner">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-reveal>COURSE MAP / 01</div>
+          <h2 class="scene-title" data-reveal data-delay="1">先看清整棵树，<br>再走进一条枝。</h2>
+        </div>
+        <div class="right" data-reveal data-delay="2">
+          <p class="body">总课程是《制造美学下的产业思维》。制造美学是顶层，智能交互是其中一条体验支线，产业思维是判断方法。</p>
+        </div>
+      </div>
+
+      <div class="map-layout">
+        <div class="map-tree" data-reveal>
+          <div class="tree-root" role="button" tabindex="0" data-map-jump="3" title="跳到制造美学透镜">
+            <div class="num">ROOT / 00</div>
+            <h3>制造美学</h3>
+            <p>材料 · 结构 · 工艺 · CMF</p>
+          </div>
+          <div class="tree-branches">
+            <div class="branch is-active" role="button" tabindex="0" data-map-jump="4" title="跳到智能交互定义">
+              <div class="mono">BRANCH A / TODAY</div>
+              <h4>智能交互</h4>
+              <p>感知 · 理解 · 响应 · 协同</p>
+            </div>
+            <div class="branch" role="button" tabindex="0" data-map-jump="9" title="跳到产业思维">
+              <div class="mono">BRANCH B / JUDGEMENT</div>
+              <h4>产业思维</h4>
+              <p>成本 · 供应链 · 商业 · 生命周期</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="session-stack">
+          <div class="session-card" data-reveal data-delay="1" role="button" tabindex="0" data-map-jump="2" title="跳到开场">
+            <div class="top"><span class="no">SESSION 01 / TODAY</span><span class="time">90 MIN</span></div>
+            <h3>智能交互与设计</h3>
+            <p>从制造美学到智能交互：本质、脉络、案例与工业设计的位置。</p>
+            <div class="arrow">→ 正在这里</div>
+          </div>
+          <div class="session-card" data-reveal data-delay="2" role="button" tabindex="0" data-map-toast="第二讲：市场 · 场景 · 趋势" title="第二讲预告">
+            <div class="top"><span class="no">SESSION 02 / NEXT</span><span class="time">90 MIN</span></div>
+            <h3>市场 · 场景 · 趋势</h3>
+            <p>全球市场格局、制造场景的智能交互落地、未来趋势与伦理边界。</p>
+            <div class="arrow">→ 第二次课</div>
+          </div>
+          <div class="opening-foot" style="margin-top:6px;border-top:0;padding-top:0" data-reveal data-delay="3">
+            <div class="mono" style="color:var(--muted)">从制造中看见美 / 从产业中判断美</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCENE 2 · OPENING SIX INTERACTIONS
+       ============================================================ -->
+  <section class="scene scene--paper2" data-scene="2" data-theme="light" data-title="开场 · 六个日常交互">
+    <div class="scene__inner">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-reveal>OPENING / 02</div>
+          <h2 class="scene-title" data-reveal data-delay="1">今天你和多少个<br>「交互」打过交道？</h2>
+        </div>
+        <div class="right" data-reveal data-delay="2">
+          <p class="body">从起床到走进教室，六个动作里，机器都在替你做判断。点击卡片，看看哪些是你在操作，哪些是机器在猜。</p>
+        </div>
+      </div>
+
+      <div class="flip-grid" id="flipGrid">
+        <button class="flip-card" data-flip type="button">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div class="idx">01 / 06</div>
+              <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+              <div><h4>手机解锁</h4><div class="sub">看一眼就开</div></div>
+              <div class="flip-hint">点击翻面 →</div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="idx">01 / 06</div>
+              <h4>机器在判断“是不是本人”</h4>
+              <p>你只做了一个动作，机器完成了一次身份识别。你不需要先学一套规则。</p>
+              <div class="flip-hint">← 点击翻回</div>
+            </div>
+          </div>
+        </button>
+
+        <button class="flip-card" data-flip type="button">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div class="idx">02 / 06</div>
+              <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+              <div><h4>语音闹钟</h4><div class="sub">说“明早七点”</div></div>
+              <div class="flip-hint">点击翻面 →</div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="idx">02 / 06</div>
+              <h4>机器补齐日期与重复规则</h4>
+              <p>你没说“工作日”还是“每天”，机器会根据场景补全，并给出可修改的确认。</p>
+              <div class="flip-hint">← 点击翻回</div>
+            </div>
+          </div>
+        </button>
+
+        <button class="flip-card" data-flip type="button">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div class="idx">03 / 06</div>
+              <div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="3"/><circle cx="12" cy="14" r="4"/><path d="M12 6h.01"/></svg></div>
+              <div><h4>智能音箱</h4><div class="sub">“放点安静的”</div></div>
+              <div class="flip-hint">点击翻面 →</div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="idx">03 / 06</div>
+              <h4>机器在猜风格、音量与场景</h4>
+              <p>“安静”不是一首歌名。机器把模糊的形容词翻译成可执行的选择。</p>
+              <div class="flip-hint">← 点击翻回</div>
+            </div>
+          </div>
+        </button>
+
+        <button class="flip-card" data-flip type="button">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div class="idx">04 / 06</div>
+              <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/></svg></div>
+              <div><h4>空调</h4><div class="sub">按室温与湿度改风向</div></div>
+              <div class="flip-hint">点击翻面 →</div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="idx">04 / 06</div>
+              <h4>机器接管了“调多少度”</h4>
+              <p>你只选“舒适”，机器读取环境数据，决定风向、风速和运行策略。</p>
+              <div class="flip-hint">← 点击翻回</div>
+            </div>
+          </div>
+        </button>
+
+        <button class="flip-card" data-flip type="button">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div class="idx">05 / 06</div>
+              <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v3M14 20h3"/></svg></div>
+              <div><h4>扫码点单</h4><div class="sub">桌号、口味、历史偏好</div></div>
+              <div class="flip-hint">点击翻面 →</div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="idx">05 / 06</div>
+              <h4>机器把上下文一起带出来</h4>
+              <p>扫的不是一个码，是一次“你坐哪、你常点什么、今天想吃什么”的服务编排。</p>
+              <div class="flip-hint">← 点击翻回</div>
+            </div>
+          </div>
+        </button>
+
+        <button class="flip-card" data-flip type="button">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div class="idx">06 / 06</div>
+              <div class="icon"><svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div>
+              <div><h4>车载导航</h4><div class="sub">说“避开堵车”</div></div>
+              <div class="flip-hint">点击翻面 →</div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="idx">06 / 06</div>
+              <h4>机器改路线、重算到达时间</h4>
+              <p>你给的是目标，不是指令。机器把“避开堵车”翻译成路线、时间与播报。</p>
+              <div class="flip-hint">← 点击翻回</div>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <div class="opening-foot">
+        <div class="question">这些动作里，哪些是你在操作机器，哪些是机器在猜你的意图？</div>
+        <div class="counter" id="flipCounter">已翻 0 / 6</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCENE 3 · MANUFACTURING LENS
+       ============================================================ -->
+  <section class="scene scene--light" data-scene="3" data-theme="light" data-title="制造美学透镜">
+    <div class="scene__inner">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-reveal>MANUFACTURING LENS / 03</div>
+          <h2 class="scene-title" data-reveal data-delay="1">制造美学，<br>不是材料课。</h2>
+        </div>
+        <div class="right" data-reveal data-delay="2">
+          <p class="body">只讲那些<strong>直接改变交互感受</strong>的制造细节：滚花、阻尼、按键行程、材料触感。它们是交互的物理基础，不是外观装饰。</p>
+          <button class="btn" type="button" data-action="explode" style="margin-top:12px">打开 3D 爆炸图 →</button>
+        </div>
+      </div>
+
+      <div class="lens-grid">
+        <article class="lens-card" data-lens-card="leica" data-reveal>
+          <div class="lens-visual">
+            <span class="tag">MATERIAL / 01</span>
+            <img src="assets/img/generated/lens-leica.jpg" alt="徕卡 M 拨盘的滚花与阻尼">
+          </div>
+          <div class="lens-body">
+            <h3>徕卡 M 拨盘</h3>
+            <div class="model">LEICA M / TACTILE DIAL</div>
+            <div class="lens-tabs">
+              <button class="lens-tab is-active" data-tab="look">外观</button>
+              <button class="lens-tab" data-tab="make">制造</button>
+              <button class="lens-tab" data-tab="interact">交互</button>
+            </div>
+            <div class="lens-copy" data-lens-copy>金属的冷峻、滚花的咬合、机身的重量——它先是一件“被制造出来的物件”。</div>
+            <div class="lens-quote">“滚花让手指有抓力，阻尼让转动有节奏。”</div>
+          </div>
+        </article>
+
+        <article class="lens-card" data-lens-card="purax" data-reveal data-delay="1">
+          <div class="lens-visual">
+            <span class="tag">STRUCTURE / 02</span>
+            <img src="assets/img/generated/lens-purax.jpg" alt="华为 Pura X 折叠铰链特写">
+          </div>
+          <div class="lens-body">
+            <h3>华为 Pura X 铰链</h3>
+            <div class="model">HUAWEI PURA X / WIDE FOLD</div>
+            <div class="lens-tabs">
+              <button class="lens-tab is-active" data-tab="look">外观</button>
+              <button class="lens-tab" data-tab="make">制造</button>
+              <button class="lens-tab" data-tab="interact">交互</button>
+            </div>
+            <div class="lens-copy" data-lens-copy>16:10 的阔型比例，让“折叠”不只是变小，而是换一种使用姿态。</div>
+            <div class="lens-quote">“铰链的阻尼，决定了展开那一下的手感。”</div>
+          </div>
+        </article>
+
+        <article class="lens-card" data-lens-card="su7" data-reveal data-delay="2">
+          <div class="lens-visual">
+            <span class="tag">PROCESS / 03</span>
+            <img src="assets/img/generated/lens-su7.jpg" alt="小米 SU7 中控物理按键">
+          </div>
+          <div class="lens-body">
+            <h3>小米 SU7 物理按键</h3>
+            <div class="model">XIAOMI SU7 / PHYSICAL CONTROL</div>
+            <div class="lens-tabs">
+              <button class="lens-tab is-active" data-tab="look">外观</button>
+              <button class="lens-tab" data-tab="make">制造</button>
+              <button class="lens-tab" data-tab="interact">交互</button>
+            </div>
+            <div class="lens-copy" data-lens-copy>在全是屏幕的座舱里，保留一排可以盲操作的物理按键。</div>
+            <div class="lens-quote">“温度和风量不用看屏幕，手指知道在哪里。”</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCENE 4 · DEFINITION
+       ============================================================ -->
+  <section class="scene scene--dark" data-scene="4" data-theme="dark" data-title="智能交互的定义">
+    <div class="scene__inner">
+      <div class="def-layout">
+        <div>
+          <div class="eyebrow" data-reveal>DEFINITION / 04</div>
+          <h2 class="def-statement" data-reveal data-delay="1">交互不是操作，<br>是<em>理解</em>。</h2>
+          <p class="def-sub" data-reveal data-delay="2">智能交互不是“把按钮换成语音”，也不是“在界面上加一个 AI 助手”。它是机器在感知用户、场景和上下文的基础上，推断人的真实意图，并在合适的时机主动响应。</p>
+          <div class="not-equal" data-reveal data-delay="3">
+            <span class="chip">不是语音</span>
+            <span class="chip">不是自动化</span>
+            <span class="chip">不是用了 AI</span>
+            <span class="chip">不是替人做决定</span>
+          </div>
+        </div>
+        <div class="element-grid">
+          <div class="element-tile" data-reveal data-delay="1">
+            <div class="no">01 / PERCEIVE</div>
+            <h3>感知</h3>
+            <p>语音、图像、手势、位置、温度、设备状态——先看见场景，才谈得上理解。</p>
+          </div>
+          <div class="element-tile" data-reveal data-delay="2">
+            <div class="no">02 / UNDERSTAND</div>
+            <h3>理解</h3>
+            <p>结合上下文、对象、历史与场景，推断真实目标；能接住含糊、省略和多意图。</p>
+          </div>
+          <div class="element-tile" data-reveal data-delay="3">
+            <div class="no">03 / RESPOND</div>
+            <h3>响应</h3>
+            <p>执行、追问、给候选、主动建议、即时生成界面；关键是给出可执行的下一步。</p>
+          </div>
+          <div class="element-tile" data-reveal data-delay="4">
+            <div class="no">04 / COLLABORATE</div>
+            <h3>协同</h3>
+            <p>机器补细节、做执行，人做关键决定；人可打断、可纠正、可接管。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCENE 5 · DEMO
+       ============================================================ -->
+  <section class="scene scene--dark" data-scene="5" data-theme="dark" data-title="有点冷 · 双模式演示">
+    <div class="scene__inner">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-reveal>DEMO / 05</div>
+          <h2 class="scene-title" data-reveal data-delay="1">同一句话，<br>两种系统怎么接？</h2>
+        </div>
+        <div class="right" data-reveal data-delay="2">
+          <p class="body">左边是“关键词匹配”，右边是“理解意图＋主动响应”。点一下，听同一句“有点冷”在两个系统里发生了什么。</p>
+        </div>
+      </div>
+
+      <div class="demo-layout">
+        <div class="demo-panel" id="demoLeft">
+          <div class="demo-head"><span>KEYWORD MODE</span><b>传统语音控制</b></div>
+          <div class="demo-input"><span id="demoLeftText">等待输入…</span><span class="cursor"></span></div>
+          <div class="demo-log" id="demoLeftLog">
+            <div class="demo-line"><span class="tag">SYS</span><span class="txt">系统只认固定指令。请说：“打开空调”或“调高温度”。</span></div>
+          </div>
+          <div class="demo-note">关键词命中 → 执行；没命中 → 报错</div>
+        </div>
+
+        <div class="demo-divider"><span>VS</span></div>
+
+        <div class="demo-panel is-right" id="demoRight">
+          <div class="demo-head"><span>INTENT MODE</span><b>智能交互</b></div>
+          <div class="demo-input"><span id="demoRightText">等待输入…</span><span class="cursor"></span></div>
+          <div class="demo-log" id="demoRightLog">
+            <div class="demo-line"><span class="tag">SYS</span><span class="txt">已读取场景：卧室 · 18°C · 夜间模式</span></div>
+          </div>
+          <div class="demo-note">感知场景 → 推断意图 → 主动响应 → 允许纠正</div>
+        </div>
+      </div>
+
+      <div class="demo-actions">
+        <button class="btn btn--solid" id="runDemo">说一句「有点冷」</button>
+        <button class="btn" id="resetDemo">重置</button>
+        <span class="mono" style="margin-left:auto;color:rgba(245,241,232,.35)">按 D 也可触发</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCENE 6 · LAYERS + LOOP
+       ============================================================ -->
+  <section class="scene scene--light" data-scene="6" data-theme="light" data-title="交互五层 / 五步闭环">
+    <div class="scene__inner">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-reveal>METHOD / 06</div>
+          <h2 class="scene-title" data-reveal data-delay="1">交互不是一个界面，<br>是五层结构。</h2>
+        </div>
+        <div class="right" data-reveal data-delay="2">
+          <p class="body">工业设计通常停在①物理层和②界面层。往上走一层，你会开始定义任务、系统和产业——这就是“设计”从造型走向产品定义的地方。</p>
+          <button class="btn" type="button" data-action="tower" style="margin-top:14px">打开 3D 交互塔 →</button>
+        </div>
+      </div>
+
+      <div class="layers-layout">
+        <div>
+          <div class="layer-stack" id="layerStack">
+            <button class="layer is-active" data-layer="0" type="button"><span class="n">01</span><span class="name">物理层</span><span class="en">PHYSICAL</span></button>
+            <button class="layer" data-layer="1" type="button"><span class="n">02</span><span class="name">界面层</span><span class="en">INTERFACE</span></button>
+            <button class="layer" data-layer="2" type="button"><span class="n">03</span><span class="name">行为 / 任务层</span><span class="en">TASK</span></button>
+            <button class="layer" data-layer="3" type="button"><span class="n">04</span><span class="name">系统 / 数据层</span><span class="en">SYSTEM</span></button>
+            <button class="layer" data-layer="4" type="button"><span class="n">05</span><span class="name">产业 / 生态层</span><span class="en">INDUSTRY</span></button>
+          </div>
+          <div class="layer-detail" id="layerDetail"><strong>物理层：</strong>形态、材料、按键、触感、声光反馈。用户摸得到的东西。例：徕卡拨盘、SU7 物理按键。</div>
+        </div>
+
+        <div class="loop-card">
+          <svg class="loop-svg" viewBox="0 0 420 420" aria-label="五步闭环">
+            <circle cx="210" cy="210" r="140" fill="none" stroke="rgba(36,71,107,.25)" stroke-width="1" stroke-dasharray="3 7"/>
+            <circle cx="210" cy="210" r="105" fill="none" stroke="rgba(36,71,107,.12)" stroke-width="1"/>
+            <g class="loop-orbit"><circle cx="210" cy="50" r="4.5" fill="#e4572e"/><circle cx="210" cy="50" r="9" fill="none" stroke="#e4572e" stroke-opacity=".25"/></g>
+            <g class="loop-node is-active" data-step="0"><circle cx="210" cy="70" r="27" fill="#24476b" stroke="#24476b"/><text x="210" y="70">感知</text></g>
+            <g class="loop-node" data-step="1"><circle cx="343" cy="167" r="27" fill="#f2efe7" stroke="#24476b"/><text x="343" y="167">理解</text></g>
+            <g class="loop-node" data-step="2"><circle cx="292" cy="323" r="27" fill="#f2efe7" stroke="#24476b"/><text x="292" y="323">决策</text></g>
+            <g class="loop-node" data-step="3"><circle cx="128" cy="323" r="27" fill="#f2efe7" stroke="#24476b"/><text x="128" y="323">响应</text></g>
+            <g class="loop-node" data-step="4"><circle cx="77" cy="167" r="27" fill="#f2efe7" stroke="#24476b"/><text x="77" y="167">反馈</text></g>
+            <text x="210" y="204" text-anchor="middle" font-family="SFMono-Regular,monospace" font-size="9" fill="#79746a" letter-spacing="2">ONE LOOP</text>
+            <text x="210" y="226" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="18" fill="#24476b">五步闭环</text>
+          </svg>
+          <div class="loop-detail" id="loopDetail"><b>感知：</b>麦克风、摄像头、传感器先拿到信号；这一步失败，用户的表现是“喊三次没反应”。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCENE 7 · CASE WALL
+       ============================================================ -->
+  <section class="scene scene--paper2" data-scene="7" data-theme="light" data-title="2022–2026 案例墙">
+    <div class="scene__inner">
+      <div class="casewall-head">
+        <div>
+          <div class="eyebrow" data-reveal>CASE WALL / 07</div>
+          <h2 class="scene-title" data-reveal data-delay="1">2022–2026，<br>交互发生了什么？</h2>
+        </div>
+        <div class="right" data-reveal data-delay="2" style="text-align:right">
+          <p class="body">形态在变、输入在变、状态在变、智能体开始替你执行。课堂精讲 5 个，完整案例库有 44 个。</p>
+          <div style="display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin-top:12px">
+            <button class="btn" data-action="library">打开完整案例库 →</button>
+            <button class="btn" data-action="corridor">打开 3D 案例走廊 →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline" data-reveal>
+        <div class="year-node">2022</div>
+        <div class="year-node">2023</div>
+        <div class="year-node">2024</div>
+        <div class="year-node">2025</div>
+        <div class="year-node is-now">2026 · NOW</div>
+      </div>
+
+      <div class="filter-row" id="caseFilters">
+        <button class="filter is-active" data-filter="all">全部</button>
+        <button class="filter" data-filter="A 形态">形态 / 空间</button>
+        <button class="filter" data-filter="B 状态">状态 / 反馈</button>
+        <button class="filter" data-filter="C 输入">输入 / 步骤</button>
+        <button class="filter" data-filter="D 智能体">智能体 / 软件</button>
+        <button class="filter" data-filter="F 反例">反例</button>
+      </div>
+
+      <div class="case-grid" id="featuredGrid"></div>
+
+      <div class="casewall-foot">
+        <div class="hint">点击卡片看详情 / 按 C 打开完整案例库</div>
+        <div class="hint" style="color:var(--orange)">案例截至 2026-11</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCENE 8 · SOFTWARE → PHYSICAL
+       ============================================================ -->
+  <section class="scene scene--light" data-scene="8" data-theme="light" data-title="软件经验 → 实体产品">
+    <div class="scene__inner">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-reveal>TRANSFER / 08</div>
+          <h2 class="scene-title" data-reveal data-delay="1">你的软件经验，<br>怎么落到实体产品？</h2>
+        </div>
+        <div class="right" data-reveal data-delay="2">
+          <p class="body">软件产品里的流程、状态机、权限、数据埋点、API、灰度发布，在实体产品里都能找到对应物。不是转行，是换一种材料继续做交互。</p>
+          <div class="mono" style="margin-top:14px;color:var(--orange)">SOFTWARE 70% / PHYSICAL 30%</div>
+        </div>
+      </div>
+
+      <div class="map-software">
+        <div class="map-col" id="softwareCol">
+          <div class="map-item" data-pair="0"><span class="k">01</span>用户流程 / 任务分析</div>
+          <div class="map-item" data-pair="1"><span class="k">02</span>状态机 / 异常处理</div>
+          <div class="map-item" data-pair="2"><span class="k">03</span>权限 / 角色</div>
+          <div class="map-item" data-pair="3"><span class="k">04</span>数据埋点 / 指标</div>
+          <div class="map-item" data-pair="4"><span class="k">05</span>API / 系统集成</div>
+          <div class="map-item" data-pair="5"><span class="k">06</span>版本迭代 / 灰度</div>
+        </div>
+        <div class="map-arrows"><span>→</span><span>→</span><span>→</span><span>→</span><span>→</span><span>→</span></div>
+        <div class="map-col" id="physicalCol">
+          <div class="map-item" data-pair="0"><span class="k">01</span>使用场景 / 操作流程</div>
+          <div class="map-item" data-pair="1"><span class="k">02</span>产品状态 / 故障反馈</div>
+          <div class="map-item" data-pair="2"><span class="k">03</span>使用权限 / 多人协作</div>
+          <div class="map-item" data-pair="3"><span class="k">04</span>传感器数据 / 使用数据</div>
+          <div class="map-item" data-pair="4"><span class="k">05</span>设备接口 / 协议</div>
+          <div class="map-item" data-pair="5"><span class="k">06</span>试产 / OTA / 迭代</div>
+        </div>
+      </div>
+
+      <div class="dustguard-strip" data-case="C040" style="cursor:pointer" data-reveal data-delay="2">
+        <div class="shot"><img src="assets/img/dustguard-duty.png" alt="DUSTGUARD 值班大屏"><div class="play-badge">▶ 宣传视频</div></div>
+        <div class="copy">
+          <div class="eyebrow">SYSTEM CASE / DUSTGUARD</div>
+          <h3>一个工业安全系统，<br>怎么把“角色、告警、证据、离线”做成交互？</h3>
+          <p>4 个角色、4 块屏、1 条告警闭环。不是“一个人用的软件”，是给四个岗位各一块“该看的屏”。</p>
+          <div class="mini-stats">
+            <div><b>4</b><span>ROLES</span></div>
+            <div><b>15'</b><span>ESCALATION</span></div>
+            <div><b>100%</b><span>EVIDENCE</span></div>
+          </div>
+          <button class="btn" data-case="C040" style="margin-top:16px;align-self:flex-start;color:#f6f2e9;border-color:rgba(255,255,255,.35)">查看案例 / 视频 →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCENE 9 · INDUSTRY
+       ============================================================ -->
+  <section class="scene scene--paper2" data-scene="9" data-theme="light" data-title="产业思维">
+    <div class="scene__inner">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-reveal>INDUSTRY / 09</div>
+          <h2 class="scene-title" data-reveal data-delay="1">工业设计，<br>站在产业链哪一环？</h2>
+        </div>
+        <div class="right" data-reveal data-delay="2">
+          <p class="body">不是固定的“中游”，而是<strong>产品定义与开发</strong>环节：上游给能力，下游给场景，中间决定产品长什么样、怎么响应、值不值得做。</p>
+        </div>
+      </div>
+
+      <div class="chain" data-reveal>
+        <div class="chain-card">
+          <div class="no">UPSTREAM / 01</div>
+          <h3>上游 · 能力</h3>
+          <p>芯片、算法、云服务、传感器、材料。解决“能不能做到”，交付技术指标。</p>
+        </div>
+        <div class="chain-arrow">→</div>
+        <div class="chain-card is-here">
+          <div class="no">MIDSTREAM / 02</div>
+          <h3>中游 · 定义</h3>
+          <p>产品定义、交互设计、形态设计、CMF。解决“用户要不要用”，交付可用的产品。</p>
+        </div>
+        <div class="chain-arrow">→</div>
+        <div class="chain-card">
+          <div class="no">DOWNSTREAM / 03</div>
+          <h3>下游 · 场景</h3>
+          <p>门店、产线、售后、内容服务。解决“用起来值不值”，交付持续的使用。</p>
+        </div>
+      </div>
+
+      <div class="industry-bottom">
+        <div class="smile-box" data-reveal data-delay="1">
+          <svg viewBox="0 0 640 240" aria-label="微笑曲线">
+            <path d="M50 60 C180 60 220 198 320 198 C420 198 460 60 590 60" fill="none" stroke="#24476b" stroke-width="2.4"/>
+            <circle cx="96" cy="66" r="7" fill="#e4572e"/>
+            <circle cx="320" cy="198" r="7" fill="#24476b"/>
+            <circle cx="544" cy="66" r="7" fill="#e4572e"/>
+            <text x="78" y="44" font-family="PingFang SC, sans-serif" font-size="17" fill="#171715">研发 / 设计</text>
+            <text x="286" y="226" font-family="PingFang SC, sans-serif" font-size="15" fill="#79746a">制造 / 装配</text>
+            <text x="512" y="44" font-family="PingFang SC, sans-serif" font-size="17" fill="#171715">品牌 / 服务</text>
+            <text x="60" y="92" font-family="SFMono-Regular,monospace" font-size="8" fill="#e4572e">INDUSTRIAL DESIGN</text>
+            <path d="M96 74v48" stroke="#e4572e" stroke-width="1" stroke-dasharray="2 4"/>
+            <text x="72" y="140" font-family="SFMono-Regular,monospace" font-size="8" fill="#e4572e">HIGH VALUE</text>
+          </svg>
+          <div class="smile-caption">微笑曲线：设计研发与品牌服务占据高附加值两端，制造装配利润较薄。</div>
+        </div>
+        <div class="industry-note" data-reveal data-delay="2">
+          <p><b>产业思维不是“知道产业链”</b>，而是能判断：这个交互值不值得做、成本能不能扛、供应链能不能跟上、出了问题谁负责。</p>
+          <p>DUSTGUARD 的 ROI 测算、三档报价、“能做/不能做”边界，就是一套产业思维的展示：它不只讲界面，还讲这套系统怎么被卖出去、怎么落地。</p>
+          <button class="btn" data-case="C040" style="margin-top:10px">看 DUSTGUARD 的产业视角 →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCENE 10 · SUMMARY
+       ============================================================ -->
+  <section class="scene scene--dark" data-scene="10" data-theme="dark" data-title="小结与作业">
+    <div class="scene__inner">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-reveal>SUMMARY / 10</div>
+          <h2 class="scene-title" data-reveal data-delay="1" style="color:#f6f2e9">今天的三句话</h2>
+        </div>
+        <div class="right" data-reveal data-delay="2">
+          <p class="body">记住这三条，第二次课直接从制造场景接上。</p>
+        </div>
+      </div>
+
+      <div class="summary-layout">
+        <div class="summary-list">
+          <div class="summary-row" data-reveal>
+            <div class="n">01</div>
+            <p>智能交互的本质是<em>理解意图并主动响应</em>；设计对象从界面转向判断。</p>
+          </div>
+          <div class="summary-row" data-reveal data-delay="1">
+            <div class="n">02</div>
+            <p>拐点在 2020 年后：多模态统一理解＋边缘侧实时响应，让“说一句就完成”成立；2022 后进入智能体与空间交互。</p>
+          </div>
+          <div class="summary-row" data-reveal data-delay="2">
+            <div class="n">03</div>
+            <p>工业设计的位置在<em>定义交互</em>：定场景、定形态、定响应策略。</p>
+          </div>
+        </div>
+
+        <div class="homework" data-reveal data-delay="2">
+          <div class="label">AFTER CLASS / 下次带来</div>
+          <h3>拍三张细节，<br>讲一个交互。</h3>
+          <p>选一个你喜欢的工业产品：拍三张细节图（材料 / 结构 / 工艺或 CMF 各一张），再用“理解意图＋主动响应”拆一次成功、一次失败，各写 100 字。</p>
+          <div class="next">第二次课：市场格局 · 制造场景 · 趋势与伦理<br>作业会在开场用 5 分钟分享。</div>
+        </div>
+      </div>
+      <div class="end-mark">制造美学下的产业思维 / 第一讲 / 智能交互与设计 / 2026.11</div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     HUD
+     ============================================================ -->
+<div class="hud" id="hud">
+  <div class="left"><span class="chapter" id="hudChapter">00 / 封面</span><span id="hudTitle">智能交互与设计</span></div>
+  <div class="right"><span class="k">← → 翻页</span><span class="k">O 总览</span><span class="k">P 备注</span><span class="k">B 黑屏</span><span class="k">C 案例库</span></div>
+</div>
+
+<!-- ============================================================
+     OVERLAYS
+     ============================================================ -->
+<div class="overlay" id="libraryOverlay" aria-hidden="true">
+  <div class="overlay-head">
+    <h2>案例库 <span class="sub" id="librarySub">44 CASES / 2022–2026</span></h2>
+    <button class="overlay-close" data-action="close">关闭 ESC</button>
+  </div>
+  <div class="library-shell">
+    <div class="library-toolbar">
+      <input class="search" id="librarySearch" type="search" placeholder="搜索产品、年份、关键词……">
+      <div class="filter-row" id="libraryFilters" style="margin:0">
+        <button class="filter is-active" data-filter="all">全部</button>
+        <button class="filter" data-filter="A 形态">形态 / 空间</button>
+        <button class="filter" data-filter="B 状态">状态 / 反馈</button>
+        <button class="filter" data-filter="C 输入">输入 / 步骤</button>
+        <button class="filter" data-filter="D 智能体">智能体 / 软件</button>
+        <button class="filter" data-filter="E 产业">产业 / 工业</button>
+        <button class="filter" data-filter="F 反例">反例</button>
+      </div>
+      <div class="library-count" id="libraryCount">44</div>
+    </div>
+    <div class="library-grid" id="libraryGrid"></div>
+  </div>
+</div>
+
+<div class="overlay" id="glossaryOverlay" aria-hidden="true">
+  <div class="overlay-head">
+    <h2>术语表 <span class="sub">GLOSSARY</span></h2>
+    <button class="overlay-close" data-action="close">关闭 ESC</button>
+  </div>
+  <div class="library-shell">
+    <div class="glossary-list" id="glossaryList"></div>
+  </div>
+</div>
+
+<div class="overlay" id="overviewOverlay" aria-hidden="true">
+  <div class="overlay-head">
+    <h2>总览 <span class="sub">SCENE OVERVIEW</span></h2>
+    <button class="overlay-close" data-action="close">关闭 ESC</button>
+  </div>
+  <div class="overview-shell"><div class="overview-grid" id="overviewGrid"></div></div>
+</div>
+
+<div class="notes-drawer" id="notesDrawer" aria-hidden="true">
+  <div class="notes-head">
+    <h3>讲师备注</h3>
+    <button class="notes-close" data-action="notes-close">关闭 P</button>
+  </div>
+  <div class="notes-body">
+    <div class="k" id="notesScene">SCENE 00</div>
+    <div id="notesText"></div>
+  </div>
+</div>
+
+<div class="case-modal" id="caseModal" aria-hidden="true">
+  <div class="case-sheet">
+    <div class="case-sheet__top">
+      <div class="case-sheet__kicker"><span class="dot"></span> 案例档案 / CASE FILE</div>
+      <div class="case-sheet__nav">
+        <button class="case-nav-btn" type="button" data-case-prev>← 上一个</button>
+        <span class="case-counter" id="caseCounter">01 / 44</span>
+        <button class="case-nav-btn" type="button" data-case-next>下一个 →</button>
+        <button class="case-nav-btn case-nav-btn--close" type="button" data-action="case-close">关闭 ESC</button>
+      </div>
+    </div>
+    <div class="case-sheet__scroll" id="caseSheet"></div>
+  </div>
+</div>
+
+<div class="tower-overlay" id="explodeOverlay" aria-hidden="true">
+  <div class="tower-shell">
+    <div class="tower-head">
+      <div><div class="mono">3D / EXPLODED VIEW</div><h2>制造美学 · 爆炸图</h2></div>
+      <button class="tower-close" type="button" id="explodeClose">关闭 ESC</button>
+    </div>
+    <div class="tower-body">
+      <div class="tower-canvas-wrap">
+        <canvas id="explodeCanvas" style="width:100%;height:100%;display:block"></canvas>
+        <div class="tower-hint">拖动旋转 · 滚轮缩放 · 点击零件</div>
+        <div class="tower-fallback" id="explodeFallback">当前环境不支持 WebGL，下面用文字版查看制造基础。</div>
+      </div>
+      <div class="tower-panel">
+        <div class="eyebrow">MATERIAL / STRUCTURE / PROCESS / CMF</div>
+        <div class="tower-no" id="explodeNo">01 / COVER GLASS</div>
+        <h1 id="explodeTitle">盖板玻璃</h1>
+        <p id="explodeBody">材料、工艺、CMF、交互影响。</p>
+        <div class="tower-buttons" id="explodeButtons"></div>
+        <div class="tower-note">这不是手机拆机课，而是让你看到：材料、结构、工艺、CMF 如何共同决定触感、折痕、重量和折叠手感。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tower-overlay" id="corridorOverlay" aria-hidden="true">
+  <div class="tower-shell">
+    <div class="tower-head">
+      <div><div class="mono">3D / CASE CORRIDOR</div><h2>2022–2026 案例走廊</h2></div>
+      <button class="tower-close" type="button" id="corridorClose">关闭 ESC</button>
+    </div>
+    <div class="tower-body">
+      <div class="tower-canvas-wrap">
+        <canvas id="corridorCanvas" style="width:100%;height:100%;display:block"></canvas>
+        <div class="tower-hint">拖动旋转 · 点击卡片 · 按钮打开详情</div>
+      </div>
+      <div class="tower-panel">
+        <div class="eyebrow">CASE CORRIDOR / 2022–2026</div>
+        <div class="tower-no" id="corridorNo">CASE</div>
+        <h1 id="corridorTitle">选择一张卡</h1>
+        <p id="corridorBody">拖动案例走廊，点击卡片查看它在课程里的位置。</p>
+        <button class="btn" id="corridorOpen" type="button" style="margin-top:24px;align-self:flex-start">打开案例详情 →</button>
+        <div class="tower-note">6 个精选案例悬浮在时间走廊中；完整 44 条案例在案例库里。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tower-overlay" id="towerOverlay" aria-hidden="true">
+  <div class="tower-shell">
+    <div class="tower-head">
+      <div>
+        <div class="mono">3D / INTERACTION STACK</div>
+        <h2>交互五层塔</h2>
+      </div>
+      <button class="tower-close" type="button" id="towerClose">关闭 ESC</button>
+    </div>
+    <div class="tower-body">
+      <div class="tower-canvas-wrap">
+        <canvas id="towerCanvas" style="width:100%;height:100%;display:block"></canvas>
+        <div class="tower-hint">拖动旋转 · 滚轮缩放 · 点击层</div>
+        <div class="tower-fallback" id="towerFallback">当前环境不支持 WebGL，下面用文字版查看五层结构。</div>
+      </div>
+      <div class="tower-panel">
+        <div class="eyebrow">INTERACTION STACK / 3D</div>
+        <div class="tower-no mono" id="towerNo">01 / PHYSICAL</div>
+        <h1 id="towerTitle">物理层</h1>
+        <p id="towerBody">形态、材料、按键、触感、声光反馈。用户摸得到的东西。</p>
+        <div class="tower-buttons" id="towerButtons"></div>
+        <div class="tower-note">拖动旋转，点击任意一层查看它在课程里的位置与例子。工业设计通常停在 1–2 层，往上走一层，才开始定义完整交互。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="blackout" id="blackout">
+  <div class="t">PAUSE / DISCUSSION</div>
+  <div class="big" id="blackoutClock">00:00</div>
+  <small>按 B 或 ESC 返回</small>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/case-details.js"></script>
+<script src="assets/js/vendor/three.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/enhance.js"></script>
+<script src="assets/js/three-tower.js"></script>
+<script src="assets/js/three-exhibits.js"></script>
+</body>
+</html>
