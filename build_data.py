@@ -50,6 +50,16 @@ galleries = {
 }
 featured = {"C001", "C004", "C005", "C011", "C016", "C017"}
 
+# Theme tags: map each featured case to one of the four interaction elements.
+SKILL = {
+    "C001": "形态 × 理解",
+    "C004": "状态反馈",
+    "C005": "感知 × 输入",
+    "C011": "意图直达",
+    "C016": "代理执行",
+    "C017": "反例 · 容错",
+}
+
 for r in rows:
     main = images.get(r["id"], "")
     # Fall back to the schematic SVG only if a generated file is missing.
@@ -59,6 +69,7 @@ for r in rows:
     r["thumb"] = main
     r["aiImage"] = r["id"] != "C040"
     r["featured"] = r["id"] in featured
+    r["skill"] = SKILL.get(r["id"], "")
     r["gallery"] = galleries.get(r["id"], [])
     r["video"] = "assets/video/dustguard-promo.mp4" if r["id"] == "C040" else ""
 

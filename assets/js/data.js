@@ -24,6 +24,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C001.jpg",
     "aiImage": true,
     "featured": true,
+    "skill": "形态 × 理解",
     "gallery": [
       "assets/img/purax-2.jpg",
       "assets/img/purax-1.jpg",
@@ -48,6 +49,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C002.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [
       "assets/img/matexts.jpg"
     ],
@@ -70,6 +72,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C003.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -90,6 +93,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C004.jpg",
     "aiImage": true,
     "featured": true,
+    "skill": "状态反馈",
     "gallery": [],
     "video": ""
   },
@@ -110,6 +114,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C005.jpg",
     "aiImage": true,
     "featured": true,
+    "skill": "感知 × 输入",
     "gallery": [
       "assets/img/vision-pro.jpg"
     ],
@@ -132,6 +137,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C006.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -152,6 +158,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C007.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -172,6 +179,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C008.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [
       "assets/img/quark.jpg"
     ],
@@ -194,6 +202,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C009.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -214,6 +223,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C010.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -234,6 +244,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C011.jpg",
     "aiImage": true,
     "featured": true,
+    "skill": "意图直达",
     "gallery": [],
     "video": ""
   },
@@ -254,6 +265,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C012.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -274,6 +286,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C013.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -294,6 +307,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C014.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -314,6 +328,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C015.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -334,6 +349,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C016.jpg",
     "aiImage": true,
     "featured": true,
+    "skill": "代理执行",
     "gallery": [],
     "video": ""
   },
@@ -354,6 +370,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C017.jpg",
     "aiImage": true,
     "featured": true,
+    "skill": "反例 · 容错",
     "gallery": [],
     "video": ""
   },
@@ -374,6 +391,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C018.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -394,6 +412,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C019.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -414,6 +433,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C020.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -434,6 +454,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C021.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -454,6 +475,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C022.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -474,6 +496,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C023.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -494,6 +517,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C024.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -514,6 +538,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C025.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -534,6 +559,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C026.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -554,6 +580,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C027.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -574,6 +601,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C028.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -594,6 +622,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C029.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -614,6 +643,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C030.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -634,6 +664,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C031.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -654,6 +685,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C032.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -674,6 +706,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C033.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -694,6 +727,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C034.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -714,6 +748,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C035.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -734,6 +769,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C036.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -754,6 +790,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C037.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -774,6 +811,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C038.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -794,6 +832,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C039.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -814,6 +853,7 @@ window.CASES = [
     "thumb": "assets/img/dustguard-duty.jpg",
     "aiImage": false,
     "featured": false,
+    "skill": "",
     "gallery": [
       "assets/img/dustguard-duty.jpg",
       "assets/img/dustguard-mobile.jpg",
@@ -840,6 +880,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C041.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -860,6 +901,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C042.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -880,6 +922,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C043.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   },
@@ -900,6 +943,7 @@ window.CASES = [
     "thumb": "assets/img/generated/C044.jpg",
     "aiImage": true,
     "featured": false,
+    "skill": "",
     "gallery": [],
     "video": ""
   }

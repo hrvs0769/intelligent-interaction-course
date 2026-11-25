@@ -233,7 +233,9 @@
     return '<button class="case-card" type="button" data-case="' + esc(c.id) + '">' +
       '<div class="case-art">' + caseArt(c) +
       '<div class="meta"><span class="year">' + esc(c.year) + '</span><span class="cat">' + esc(c.category.split(" ")[0]) + '</span></div></div>' +
-      '<div class="body"><h4>' + esc(c.name) + '</h4><p>' + esc(c.teaching) + '</p><div class="open">OPEN CASE →</div></div>' +
+      '<div class="body"><h4>' + esc(c.name) + '</h4><p>' + esc(c.teaching) + '</p>' +
+      (c.skill ? '<div class="case-skill">' + esc(c.skill) + '</div>' : '') +
+      '<div class="open">OPEN CASE →</div></div>' +
       '</button>';
   }
 
@@ -362,12 +364,12 @@
           (d.detail
             ? '<section class="case-section case-highlight"><div class="case-label">值得展开讲的一个细节 / UNPACK THIS</div><p class="case-para">' + esc(d.detail) + '</p></section>'
             : '') +
+          (d.framework
+            ? '<section class="case-section case-framework"><div class="case-label">放回主题：智能交互与设计 / BACK TO THEME</div><p class="case-para case-para--small">' + esc(d.framework) + '</p></section>'
+            : '') +
           '<div class="case-two-col">' +
             (d.boundary
               ? '<section class="case-section"><div class="case-label">局限与争议 / LIMITS</div><p class="case-para case-para--small">' + esc(d.boundary) + '</p></section>'
-              : '') +
-            (d.framework
-              ? '<section class="case-section"><div class="case-label">放回课程框架 / FRAMEWORK</div><p class="case-para case-para--small">' + esc(d.framework) + '</p></section>'
               : '') +
           '</div>' +
         '</div>' +
