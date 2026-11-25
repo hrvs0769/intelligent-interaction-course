@@ -32,20 +32,20 @@ with open(CSV, encoding="utf-8-sig") as f:
 generated = {r["id"]: "assets/img/generated/" + r["id"] + ".jpg"
              for r in rows if r["id"] != "C040"}
 images = dict(generated)
-images["C040"] = "assets/img/dustguard-duty.png"
+images["C040"] = "assets/img/dustguard-duty.jpg"
 
 # Real product / system screenshots stay in the detail gallery for reference.
 galleries = {
     "C001": ["assets/img/purax-2.jpg", "assets/img/purax-1.jpg", "assets/img/purax-3.jpg"],
     "C002": ["assets/img/matexts.jpg"],
-    "C005": ["assets/img/vision-pro.png"],
+    "C005": ["assets/img/vision-pro.jpg"],
     "C008": ["assets/img/quark.jpg"],
     "C040": [
-        "assets/img/dustguard-duty.png",
-        "assets/img/dustguard-mobile.png",
-        "assets/img/dustguard-boss.png",
-        "assets/img/dustguard-pitch-04.png",
-        "assets/img/dustguard-pitch-01.png",
+        "assets/img/dustguard-duty.jpg",
+        "assets/img/dustguard-mobile.jpg",
+        "assets/img/dustguard-boss.jpg",
+        "assets/img/dustguard-pitch-04.jpg",
+        "assets/img/dustguard-pitch-01.jpg",
     ],
 }
 featured = {"C001", "C004", "C005", "C011", "C016", "C017"}

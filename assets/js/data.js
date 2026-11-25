@@ -111,7 +111,7 @@ window.CASES = [
     "aiImage": true,
     "featured": true,
     "gallery": [
-      "assets/img/vision-pro.png"
+      "assets/img/vision-pro.jpg"
     ],
     "video": ""
   },
@@ -810,16 +810,16 @@ window.CASES = [
     "source": "本地项目资料（授课者提供）",
     "use": "精讲",
     "imageNote": "项目截图/录屏",
-    "image": "assets/img/dustguard-duty.png",
-    "thumb": "assets/img/dustguard-duty.png",
+    "image": "assets/img/dustguard-duty.jpg",
+    "thumb": "assets/img/dustguard-duty.jpg",
     "aiImage": false,
     "featured": false,
     "gallery": [
-      "assets/img/dustguard-duty.png",
-      "assets/img/dustguard-mobile.png",
-      "assets/img/dustguard-boss.png",
-      "assets/img/dustguard-pitch-04.png",
-      "assets/img/dustguard-pitch-01.png"
+      "assets/img/dustguard-duty.jpg",
+      "assets/img/dustguard-mobile.jpg",
+      "assets/img/dustguard-boss.jpg",
+      "assets/img/dustguard-pitch-04.jpg",
+      "assets/img/dustguard-pitch-01.jpg"
     ],
     "video": "assets/video/dustguard-promo.mp4"
   },
