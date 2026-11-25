@@ -608,3 +608,41 @@ body.enhanced .homework.has-photo .label{color:#f0a58e}
 body.enhanced .homework.has-photo h3{color:#fff}
 body.enhanced .homework.has-photo p{color:rgba(255,255,255,.92)}
 body.enhanced .homework.has-photo .next{color:rgba(255,255,255,.85);border-top-color:rgba(255,255,255,.24)}
+
+/* ============================================================
+   AMBIENT 3D + AESTHETIC UPGRADE (v1.4)
+   A soft three.js point field lives behind translucent scenes.
+   Decorative only: no pointer tracking, no layout change,
+   40fps cap, reduced-motion safe, toggle with A.
+   ============================================================ */
+#ambientCanvas{position:fixed;inset:0;width:100vw;height:100vh;z-index:1;pointer-events:none;opacity:0;transition:opacity 1.4s var(--ease)}
+#ambientCanvas.is-ready{opacity:1}
+body.no-ambient #ambientCanvas{opacity:0!important}
+
+/* scenes become translucent windows onto the 3D field */
+body.enhanced .scene{position:relative;z-index:2}
+body.enhanced .scene--light{background:rgba(242,239,231,.91)}
+body.enhanced .scene--paper2{background:rgba(233,227,215,.91)}
+body.enhanced .scene--dark{background:rgba(8,11,16,.88)}
+
+/* a little more depth on persistent chrome */
+body.enhanced .topbar.is-scrolled{box-shadow:0 10px 40px rgba(16,20,26,.08)}
+body.enhanced .topbar.on-dark.is-scrolled{box-shadow:0 10px 40px rgba(0,0,0,.28)}
+body.enhanced .scene-dock{box-shadow:0 18px 60px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.12)}
+body.enhanced .scene-dock .num{text-shadow:0 0 18px rgba(228,87,46,.45)}
+body.enhanced .nav-btn:hover{box-shadow:0 0 0 1px rgba(141,227,242,.35),0 8px 24px rgba(141,227,242,.12)}
+
+/* quiet HUD corner marks on section headings */
+body.enhanced .section-head{position:relative}
+body.enhanced .section-head::after{
+  content:"";position:absolute;right:0;top:-14px;width:34px;height:34px;
+  border-top:1px solid rgba(228,87,46,.55);border-right:1px solid rgba(228,87,46,.55);
+  pointer-events:none;opacity:.75
+}
+body.enhanced .scene--dark .section-head::after{border-color:rgba(141,227,242,.5)}
+
+/* active card gets a subtle instrument glow, no tilt/magnetic motion */
+body.enhanced .flip-card:hover,body.enhanced .element-tile:hover,
+body.enhanced .chain-card:hover,body.enhanced .branch:hover{
+  box-shadow:0 0 0 1px rgba(141,227,242,.28),0 18px 50px rgba(16,20,26,.14)
+}

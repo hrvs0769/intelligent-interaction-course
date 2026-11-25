@@ -79,6 +79,9 @@
     const pct = scenes.length > 1 ? (state.index / (scenes.length - 1)) * 100 : 0;
     $("#progressFill").style.width = pct + "%";
     updateNotes();
+    window.dispatchEvent(new CustomEvent("course:scene", {
+      detail: { index: state.index, dark: !!dark }
+    }));
   }
 
   function onScroll() {
@@ -504,6 +507,10 @@
         if (a === "notes-close") toggleNotes(false);
         if (a === "fullscreen") toggleFullscreen();
         if (a === "start") goTo(1);
+        if (a === "ambient") {
+          const off = document.body.classList.toggle("no-ambient");
+          showToast(off ? "3D 氛围已关闭" : "3D 氛围已开启");
+        }
         if (a === "tower") window.open3D && window.open3D("tower");
         if (a === "explode") window.open3D && window.open3D("explode");
         if (a === "corridor") window.open3D && window.open3D("corridor");
@@ -587,6 +594,10 @@
         e.preventDefault(); openOverlay("#libraryOverlay");
       } else if (k === "g" || k === "G") {
         e.preventDefault(); openOverlay("#glossaryOverlay");
+      } else if (k === "a" || k === "A") {
+        e.preventDefault();
+        const off = document.body.classList.toggle("no-ambient");
+        showToast(off ? "3D 氛围已关闭" : "3D 氛围已开启");
       } else if (k === "d" || k === "D") {
         e.preventDefault(); runDemo();
       } else if (k === "Escape") {
