@@ -548,3 +548,63 @@ body.enhanced .smile-box svg text{font-size:11px}
 body.enhanced .tower-buttons button{color:rgba(245,241,232,.82)}
 body.enhanced .tower-buttons button span{color:rgba(245,241,232,.65)}
 body.enhanced .tower-buttons button.is-active span{color:var(--cyan)}
+
+/* ============================================================
+   SCENE PHOTO CARDS (v1.3)
+   Photo background + gradient scrim + white text. Same visual
+   language as the case-wall cards. No layout changes: the image
+   and scrim are absolutely positioned, so no reflow/overflow.
+   ============================================================ */
+.has-photo{position:relative;isolation:isolate;overflow:hidden}
+.card-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;z-index:0;transition:transform .7s var(--ease)}
+.card-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(8,11,16,.28) 0%,rgba(8,11,16,.48) 40%,rgba(8,11,16,.86) 100%),rgba(8,11,16,.16)}
+.has-photo>*:not(.card-photo):not(.card-scrim){position:relative;z-index:2}
+.has-photo:hover .card-photo{transform:scale(1.045)}
+
+/* text on photos: bright + shadow for legibility */
+.has-photo h1,.has-photo h2,.has-photo h3,.has-photo h4{text-shadow:0 1px 10px rgba(0,0,0,.65)}
+.has-photo p,.has-photo .sub,.has-photo .flip-hint,.has-photo .next{text-shadow:0 1px 7px rgba(0,0,0,.6)}
+
+/* Scene 2 · flip-card fronts */
+body.enhanced .flip-front.has-photo{color:#fff}
+body.enhanced .flip-front.has-photo .idx{color:#f0a58e}
+body.enhanced .flip-front.has-photo .icon{color:var(--cyan)}
+body.enhanced .flip-front.has-photo h4{color:#fff}
+body.enhanced .flip-front.has-photo .sub{color:rgba(255,255,255,.88)}
+body.enhanced .flip-front.has-photo .flip-hint{color:rgba(255,255,255,.8)}
+body.enhanced .flip-card.is-flipped .flip-front.has-photo .card-photo{transform:scale(1)}
+
+/* Scene 1 · course map cards */
+body.enhanced .tree-root.has-photo,body.enhanced .branch.has-photo{border-color:rgba(255,255,255,.28)}
+body.enhanced .tree-root.has-photo .num,
+body.enhanced .branch.has-photo .mono{color:#f0a58e}
+body.enhanced .branch.is-active.has-photo .mono{color:#f0a58e}
+body.enhanced .tree-root.has-photo h3,
+body.enhanced .branch.has-photo h4{color:#fff}
+body.enhanced .tree-root.has-photo p,
+body.enhanced .branch.has-photo p{color:rgba(255,255,255,.9)}
+body.enhanced .branch.is-active.has-photo{border-color:var(--orange)}
+body.enhanced .session-stack{position:relative}
+
+/* Scene 4 · four element tiles */
+body.enhanced .element-tile.has-photo{background:rgba(255,255,255,.02);border-color:rgba(255,255,255,.16)}
+body.enhanced .element-tile.has-photo .no{color:#f0a58e}
+body.enhanced .element-tile.has-photo h3{color:#fff}
+body.enhanced .element-tile.has-photo p{color:rgba(255,255,255,.9)}
+body.enhanced .element-tile.has-photo::after{background:#f0a58e}
+
+/* Scene 9 · industry chain cards */
+body.enhanced .chain-card.has-photo{border-color:rgba(255,255,255,.26)}
+body.enhanced .chain-card.has-photo .no{color:#f0a58e}
+body.enhanced .chain-card.has-photo h3{color:#fff}
+body.enhanced .chain-card.has-photo p{color:rgba(255,255,255,.9)}
+body.enhanced .chain-card.is-here.has-photo{background:rgba(228,87,46,.1);border-color:var(--orange)}
+body.enhanced .chain-card.is-here.has-photo::after{color:#f0a58e}
+
+/* Scene 10 · homework card */
+body.enhanced .homework.has-photo{border-color:rgba(255,255,255,.26)}
+body.enhanced .homework.has-photo .label{color:#f0a58e}
+body.enhanced .homework.has-photo h3{color:#fff}
+body.enhanced .homework.has-photo p{color:rgba(255,255,255,.92)}
+body.enhanced .homework.has-photo .next{color:rgba(255,255,255,.85);border-top-color:rgba(255,255,255,.24)}

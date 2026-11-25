@@ -60,6 +60,7 @@ python3 -m http.server 8080
 - `assets/js/three-tower.js` — 场景 6 的 3D 交互五层塔（three.js）
 - `assets/js/three-exhibits.js` — 场景 3 的 3D 制造美学爆炸图、场景 7 的 3D 案例走廊
 - `assets/img/generated/` — 46 张 AI 生成的教学示意图（43 条案例 + 3 张制造美学透镜），统一"工程纸 × 材料样本"风格
+- `assets/img/scenes/` — 17 张场景配图（课程地图 / 六个日常交互 / 四要素 / 产业链 / 作业卡）
 - `assets/img/` — 真实产品图与 DUSTGUARD 系统截图（案例详情画廊中保留）
 - `assets/img/thumbs/` — SVG 示意图，仅作为生成图缺失时的回退资源
 - `assets/video/` — DUSTGUARD 宣传视频（样片，19.6 秒）
