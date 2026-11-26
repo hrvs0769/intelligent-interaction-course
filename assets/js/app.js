@@ -298,6 +298,34 @@
     return window.CASES.filter(x => x.id !== c.id && (x.category || "").charAt(0) === cat).slice(0, 3);
   }
 
+  function journeyHtml(j) {
+    if (!j) return "";
+    const compare =
+      '<div class="jr-compare">' +
+        '<div class="jr-col jr-old"><div class="jr-col-head">传统交互</div><p>' + esc(j.traditional) + '</p></div>' +
+        '<div class="jr-col jr-new"><div class="jr-col-head">智能交互</div><p>' + esc(j.intelligent) + '</p></div>' +
+      '</div>';
+    const options = (j.diverge || []).map((x, i) =>
+      '<div class="jr-option"><span>0' + (i + 1) + '</span><p>' + esc(x) + '</p></div>').join("");
+    return '<section class="case-section jr-wrap">' +
+      '<div class="case-label">场景 → 发散 → 收敛 → 落地 / DESIGN JOURNEY</div>' +
+      '<div class="jr-tabs">' +
+        '<button class="jr-tab is-active" data-jr="scene">1 场景</button>' +
+        '<button class="jr-tab" data-jr="compare">2 传统 vs 智能</button>' +
+        '<button class="jr-tab" data-jr="converge">3 发散 → 收敛</button>' +
+        '<button class="jr-tab" data-jr="land">4 落地</button>' +
+      '</div>' +
+      '<div class="jr-panel is-active" data-jr-panel="scene"><p class="case-para">' + esc(j.scene) + '</p></div>' +
+      '<div class="jr-panel" data-jr-panel="compare" hidden>' + compare + '</div>' +
+      '<div class="jr-panel" data-jr-panel="converge" hidden>' +
+        '<div class="jr-options">' + options + '</div>' +
+        '<div class="jr-converge"><b>为什么收敛到这个方案</b><p>' + esc(j.converge) + '</p></div>' +
+      '</div>' +
+      '<div class="jr-panel" data-jr-panel="land" hidden><p class="case-para">' + esc(j.land) + '</p></div>' +
+      '<div class="jr-insight"><b>给学生的一句话</b>' + esc(j.insight) + '</div>' +
+    '</section>';
+  }
+
   function openCase(id) {
     const c = window.CASES.find(x => x.id === id);
     if (!c) return;
@@ -355,6 +383,7 @@
           (d.background
             ? '<section class="case-section"><div class="case-label">背景与场景 / CONTEXT</div><p class="case-para">' + esc(d.background) + '</p></section>'
             : '') +
+          journeyHtml((window.DESIGN_JOURNEYS || {})[id]) +
           (howSteps
             ? '<section class="case-section"><div class="case-label">交互怎么发生 / HOW IT WORKS</div><ol class="how-list">' + howSteps + '</ol></section>'
             : '') +
@@ -495,6 +524,47 @@
   function bind() {
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", updateChrome);
+
+    // Case detail: step through the design journey
+    document.addEventListener("click", (e) => {
+      const tab = e.target.closest("[data-jr]");
+      if (!tab) return;
+      const root = tab.closest(".jr-wrap");
+      if (!root) return;
+      $$(".jr-tab", root).forEach(b => b.classList.toggle("is-active", b === tab));
+      const which = tab.dataset.jr;
+      $$(".jr-panel", root).forEach(p => {
+        const on = p.dataset.jrPanel === which;
+        p.hidden = !on;
+        p.classList.toggle("is-active", on);
+      });
+    });
+
+    // Scene 4: switch between four-elements and traditional-vs-smart comparison
+    $$(".def-tab").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const which = btn.dataset.defTab;
+        $$(".def-tab").forEach(b => b.classList.toggle("is-active", b === btn));
+        const layout = $(".scene[data-scene='4'] .def-layout");
+        const defCol = layout && layout.children[0];
+        const extra = $(".def-left-extra");
+        const grid = $(".scene[data-scene='4'] .element-grid");
+        const panel = $("#comparePanel");
+        const showCompare = which === "compare";
+        if (panel) panel.hidden = !showCompare;
+        if (showCompare) {
+          if (layout) layout.style.display = "block";
+          if (defCol) defCol.style.display = "none";
+          if (extra) { extra.style.display = "block"; extra.style.width = "100%"; }
+          if (grid) grid.style.display = "none";
+        } else {
+          if (layout) layout.style.display = "";
+          if (defCol) defCol.style.display = "";
+          if (extra) extra.style.display = "none";
+          if (grid) grid.style.display = "";
+        }
+      });
+    });
 
     document.addEventListener("click", (e) => {
       if (e.target.closest("[data-case-prev]")) { navigateCase(-1); return; }

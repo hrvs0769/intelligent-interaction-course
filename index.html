@@ -388,6 +388,10 @@
        ============================================================ -->
   <section class="scene scene--dark" data-scene="4" data-theme="dark" data-title="智能交互的定义">
     <div class="scene__inner">
+      <div class="def-tabs" data-reveal data-delay="3">
+        <button class="def-tab is-active" data-def-tab="four">四要素</button>
+        <button class="def-tab" data-def-tab="compare">传统 vs 智能</button>
+      </div>
       <div class="def-layout">
         <div>
           <div class="eyebrow" data-reveal>智能交互与设计 / 本质定义</div>
@@ -399,6 +403,29 @@
             <span class="chip">不是用了 AI</span>
             <span class="chip">不是替人做决定</span>
           </div>
+        </div>
+        <div class="def-left-extra">
+        <div class="compare-panel" id="comparePanel" hidden>
+          <div class="compare-col compare-trad">
+            <div class="compare-label">传统交互 / GUI · 按键</div>
+            <div class="compare-row"><b>输入</b><span>精确指令：点哪个键、选哪个菜单</span></div>
+            <div class="compare-row"><b>角色关系</b><span>机器是执行器，人适应机器、按规则给指令</span></div>
+            <div class="compare-row"><b>理解对象</b><span>命令本身，不含上下文</span></div>
+            <div class="compare-row"><b>出错处理</b><span>报错，用户自己重来</span></div>
+            <div class="compare-row"><b>学习成本</b><span>要学层级、菜单与命名</span></div>
+            <div class="compare-row"><b>设计对象</b><span>界面布局与操作路径</span></div>
+          </div>
+          <div class="compare-col compare-smart">
+            <div class="compare-label">智能交互 / 感知 · 理解 · 响应</div>
+            <div class="compare-row"><b>输入</b><span>含糊意图：“有点冷”“放点安静的”</span></div>
+            <div class="compare-row"><b>角色关系</b><span>机器解释并协作，人保留关键决定与纠错权</span></div>
+            <div class="compare-row"><b>理解对象</b><span>意图＋上下文＋对象＋历史</span></div>
+            <div class="compare-row"><b>出错处理</b><span>追问、给候选、自动纠偏</span></div>
+            <div class="compare-row"><b>学习成本</b><span>贴着日常说话与动作的习惯</span></div>
+            <div class="compare-row"><b>设计对象</b><span>意图边界、响应策略、控制权</span></div>
+          </div>
+          <p class="compare-note">关键差异是“谁把模糊目标变成可执行步骤”：传统交互由人做，智能交互交给机器——所以必须同时设计确认、打断与纠偏。</p>
+        </div>
         </div>
         <div class="element-grid">
           <div class="element-tile has-photo" data-reveal data-delay="1">
@@ -874,6 +901,7 @@
 
 <script defer src="assets/js/data.js"></script>
 <script defer src="assets/js/case-details.js"></script>
+<script defer src="assets/js/design-journeys.js"></script>
 <script defer src="assets/js/app.js"></script>
 <script defer src="assets/js/enhance.js"></script>
 <script defer src="assets/js/three-loader.js"></script>
