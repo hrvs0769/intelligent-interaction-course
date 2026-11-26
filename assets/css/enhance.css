@@ -709,3 +709,22 @@ body.enhanced .scene--light,body.enhanced .scene--paper2,
 .scene[data-scene="7"] .case-card .case-art{height:96px}
 .scene[data-scene="7"] .case-card .body{padding:8px 11px}
 .scene[data-scene="7"] .case-card .body p{font-size:12px;line-height:1.35}
+
+/* ============================================================
+   CARD SEPARATION (v1.6)
+   Photo cards on light paper looked "stuck together" in projection:
+   give each a crisp light edge + soft shadow and a little more gap.
+   ============================================================ */
+body.enhanced .flip-grid{gap:clamp(16px,1.8vw,26px)}
+body.enhanced .flip-card{border:2px solid #f6f2e9;box-shadow:0 6px 22px rgba(16,20,26,.16),0 0 0 1px rgba(16,20,26,.12)}
+body.enhanced .flip-card:hover{box-shadow:0 10px 30px rgba(16,20,26,.22),0 0 0 1px rgba(228,87,46,.5)}
+body.enhanced .lens-card,body.enhanced .element-tile,body.enhanced .case-card,body.enhanced .tree-root,body.enhanced .branch,body.enhanced .chain-card{
+  box-shadow:0 4px 18px rgba(16,20,26,.09)
+}
+body.enhanced .lens-card:hover,body.enhanced .element-tile:hover,body.enhanced .case-card:hover,body.enhanced .tree-root:hover,body.enhanced .branch:hover,body.enhanced .chain-card:hover{
+  box-shadow:0 10px 28px rgba(16,20,26,.16)
+}
+
+/* Fix clipped play badge on DUSTGUARD strip & hero title line-height */
+body.enhanced .dustguard-strip .play-badge{white-space:nowrap;font-size:11px;padding:3px 7px;line-height:1.2}
+body.enhanced .hero-title{line-height:1.02}
