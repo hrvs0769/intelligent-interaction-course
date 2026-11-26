@@ -234,7 +234,7 @@
       '<div class="case-art">' + caseArt(c) +
       '<div class="meta"><span class="year">' + esc(c.year) + '</span><span class="cat">' + esc(c.category.split(" ")[0]) + '</span></div></div>' +
       '<div class="body"><h4>' + esc(c.name) + '</h4><p>' + esc(c.teaching) + '</p>' +
-      (c.skill ? '<div class="case-skill">' + esc(c.skill) + '</div>' : '') +
+      (c.skill ? '<div class="case-skill">' + esc(c.skill) + (c.usage === '略讲' ? '<em class="case-usage">略讲</em>' : '') + '</div>' : '') +
       '<div class="open">OPEN CASE →</div></div>' +
       '</button>';
   }

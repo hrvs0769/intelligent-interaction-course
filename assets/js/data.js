@@ -3,7 +3,8 @@ window.COURSE = {
   "parent": "制造美学下的产业思维",
   "subtitle": "从制造美学到智能交互",
   "session": "企业导师课 · 第一讲",
-  "duration": "90 分钟 · 2 学时"
+  "duration": "90 分钟 · 2 学时",
+  "totalCases": 44
 };
 
 window.CASES = [
@@ -25,6 +26,7 @@ window.CASES = [
     "aiImage": true,
     "featured": true,
     "skill": "形态 × 理解",
+    "usage": "精讲",
     "gallery": [
       "assets/img/purax-2.jpg",
       "assets/img/purax-1.jpg",
@@ -50,6 +52,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [
       "assets/img/matexts.jpg"
     ],
@@ -73,6 +76,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -94,6 +98,7 @@ window.CASES = [
     "aiImage": true,
     "featured": true,
     "skill": "状态反馈",
+    "usage": "精讲",
     "gallery": [],
     "video": ""
   },
@@ -115,6 +120,7 @@ window.CASES = [
     "aiImage": true,
     "featured": true,
     "skill": "感知 × 输入",
+    "usage": "精讲",
     "gallery": [
       "assets/img/vision-pro.jpg"
     ],
@@ -138,6 +144,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -159,6 +166,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -180,6 +188,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [
       "assets/img/quark.jpg"
     ],
@@ -203,6 +212,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -224,6 +234,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -245,6 +256,7 @@ window.CASES = [
     "aiImage": true,
     "featured": true,
     "skill": "意图直达",
+    "usage": "略讲",
     "gallery": [],
     "video": ""
   },
@@ -266,6 +278,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -287,6 +300,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -308,6 +322,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -329,6 +344,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -350,6 +366,7 @@ window.CASES = [
     "aiImage": true,
     "featured": true,
     "skill": "代理执行",
+    "usage": "精讲",
     "gallery": [],
     "video": ""
   },
@@ -371,6 +388,7 @@ window.CASES = [
     "aiImage": true,
     "featured": true,
     "skill": "反例 · 容错",
+    "usage": "精讲",
     "gallery": [],
     "video": ""
   },
@@ -392,6 +410,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -413,6 +432,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -434,6 +454,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -455,6 +476,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -476,6 +498,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -497,6 +520,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -518,6 +542,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -539,6 +564,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -560,6 +586,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -581,6 +608,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -602,6 +630,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -623,6 +652,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -644,6 +674,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -665,6 +696,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -686,6 +718,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -707,6 +740,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -728,6 +762,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -749,6 +784,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -770,6 +806,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -791,6 +828,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -812,6 +850,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -833,6 +872,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -854,6 +894,7 @@ window.CASES = [
     "aiImage": false,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [
       "assets/img/dustguard-duty.jpg",
       "assets/img/dustguard-mobile.jpg",
@@ -881,6 +922,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -902,6 +944,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -923,6 +966,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   },
@@ -944,6 +988,7 @@ window.CASES = [
     "aiImage": true,
     "featured": false,
     "skill": "",
+    "usage": "",
     "gallery": [],
     "video": ""
   }
@@ -996,12 +1041,12 @@ window.NOTES = {
   "0": "开场 0–3 分钟。先停在封面，让学生看清标题和“制造美学是根、智能交互是枝、设计是连接两者的语言”。不要急着讲定义。",
   "1": "课程地图 3–8 分钟。用四个概念建立坐标系；强调今天只讲“智能交互”这条支线，但始终放在“制造美学下的产业思维”里。",
   "2": "开场互动 8–15 分钟。六张卡逐一点开，让学生自己说“哪些是操作、哪些是机器在猜”。控制在 7 分钟。",
-  "3": "制造美学透镜 15–24 分钟。只讲直接改变交互感受的制造细节：徕卡拨盘的滚花/阻尼、Pura X 铰链的折叠手感、SU7 按键的盲操作。不要展开成材料课。",
+  "3": "交互的制造基础 15–24 分钟。只讲直接改变交互感受的制造细节：徕卡拨盘的滚花/阻尼、Pura X 铰链的折叠手感、SU7 按键的盲操作。不要展开成材料课。",
   "4": "智能交互定义 24–38 分钟。四要素慢慢讲；四个“不等于”用来纠偏。这里是全课核心，要留时间让学生提问。",
   "5": "“有点冷”演示 38–43 分钟。先让左栏跑一遍关键词模式，再跑右栏意图模式；问学生差别在哪。不要急着给答案。",
   "6": "交互五层/五步闭环 43–57 分钟。强调工业设计通常停在 1–2 层；往上走一层，才能定义完整交互。五步闭环作为分析工具，不要求背。",
-  "7": "2022–2026 案例墙 57–75 分钟。课堂只精讲 5 个：Pura X、灵动岛、Vision Pro、Camera Control、努比亚 M153。其余打开案例库让学生课后看。",
-  "8": "软件→实体映射 75–83 分钟。用你的软件产品经验讲流程、状态、权限、数据、API、灰度；每一项都对应到实体产品。最后用 DUSTGUARD 收口。",
-  "9": "产业思维 83–87 分钟。产业链三层、工业设计位置、微笑曲线。不要把“中游”说成固定事实，要说是“产品定义与开发环节”。",
+  "7": "2022–2026 案例墙 57–75 分钟。课堂只精讲 5 个：Pura X、灵动岛、Vision Pro、Camera Control、努比亚 M153；支付宝碰一下略讲。其余打开案例库让学生课后看。",
+  "8": "从软件交互到产品设计 75–83 分钟。映射快讲、DUSTGUARD 只讲 4 点。用你的软件产品经验讲流程、状态、权限、数据、API、灰度；每一项都对应到实体产品。",
+  "9": "产业位置 83–87 分钟。产业链三层、工业设计位置、微笑曲线。不要把“中游”说成固定事实，要说是“产品定义与开发环节”。",
   "10": "小结 87–90 分钟。三句话、作业、第二次课预告。作业要让学生去“看产品”，不是写论文。"
 };
