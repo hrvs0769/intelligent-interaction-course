@@ -326,7 +326,6 @@
   initRipple();
   initHero();
   initCmdk();
-  initSound();
   initMeta();
   initMapLinks();
   syncNav();
