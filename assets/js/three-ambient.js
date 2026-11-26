@@ -13,8 +13,8 @@
   const reduced = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const MAIN = 720;
-  const ACC = 120;
+  const MAIN = 1250;
+  const ACC = 260;
 
   function rnd(n) {
     const x = Math.sin(n * 127.1 + 311.7) * 43758.5453;
@@ -174,8 +174,8 @@
     mainAttr.setUsage(THREE.DynamicDrawUsage);
     mainGeo.setAttribute("position", mainAttr);
     mainMat = new THREE.PointsMaterial({
-      color: targetBase.clone(), size: 0.075, transparent: true,
-      opacity: 0.72, sizeAttenuation: true, depthWrite: false
+      color: targetBase.clone(), size: 0.12, transparent: true,
+      opacity: 0.95, sizeAttenuation: true, depthWrite: false
     });
     const mainPoints = new THREE.Points(mainGeo, mainMat);
     mainPoints.frustumCulled = false;
@@ -186,8 +186,8 @@
     accAttr.setUsage(THREE.DynamicDrawUsage);
     accGeo.setAttribute("position", accAttr);
     accMat = new THREE.PointsMaterial({
-      color: targetAccent.clone(), size: 0.095, transparent: true,
-      opacity: 0.58, sizeAttenuation: true, depthWrite: false
+      color: targetAccent.clone(), size: 0.17, transparent: true,
+      opacity: 0.88, sizeAttenuation: true, depthWrite: false
     });
     const accPoints = new THREE.Points(accGeo, accMat);
     accPoints.frustumCulled = false;

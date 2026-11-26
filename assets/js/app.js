@@ -511,7 +511,7 @@
         if (a === "start") goTo(1);
         if (a === "ambient") {
           const off = document.body.classList.toggle("no-ambient");
-          showToast(off ? "3D 氛围已关闭" : "3D 氛围已开启");
+          showToast(off ? "已关闭 3D 氛围 · 纯净投影画面" : "已开启 3D 氛围 · 点云随章节变化");
         }
         if (a === "tower") window.open3D && window.open3D("tower");
         if (a === "explode") window.open3D && window.open3D("explode");
@@ -599,7 +599,7 @@
       } else if (k === "a" || k === "A") {
         e.preventDefault();
         const off = document.body.classList.toggle("no-ambient");
-        showToast(off ? "3D 氛围已关闭" : "3D 氛围已开启");
+        showToast(off ? "已关闭 3D 氛围 · 纯净投影画面" : "已开启 3D 氛围 · 点云随章节变化");
       } else if (k === "d" || k === "D") {
         e.preventDefault(); runDemo();
       } else if (k === "Escape") {

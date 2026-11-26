@@ -621,9 +621,9 @@ body.no-ambient #ambientCanvas{opacity:0!important}
 
 /* scenes become translucent windows onto the 3D field */
 body.enhanced .scene{position:relative;z-index:2}
-body.enhanced .scene--light{background:rgba(242,239,231,.91)}
-body.enhanced .scene--paper2{background:rgba(233,227,215,.91)}
-body.enhanced .scene--dark{background:rgba(8,11,16,.88)}
+body.enhanced .scene--light{background:rgba(242,239,231,.80)}
+body.enhanced .scene--paper2{background:rgba(233,227,215,.80)}
+body.enhanced .scene--dark{background:rgba(8,11,16,.76)}
 
 /* a little more depth on persistent chrome */
 body.enhanced .topbar.is-scrolled{box-shadow:0 10px 40px rgba(16,20,26,.08)}
@@ -652,3 +652,10 @@ body.enhanced .chain-card:hover,body.enhanced .branch:hover{
 .case-framework{border-left:3px solid var(--orange);background:rgba(228,87,46,.055);padding:12px 16px;border-top:0!important}
 .case-framework .case-para{color:var(--ink);font-size:13.5px}
 .case-usage{float:right;font-style:normal;color:#ffd9cc;opacity:.9;border-left:1px solid rgba(255,255,255,.35);padding-left:6px;margin-left:6px}
+
+/* Ambient switch must be perceptible: when off, scenes are fully opaque
+   solid paper/dark; when on, translucent so the 3D field breathes through. */
+body.no-ambient.enhanced .scene--light{background:var(--paper)}
+body.no-ambient.enhanced .scene--paper2{background:var(--paper-2)}
+body.no-ambient.enhanced .scene--dark{background:var(--dark)}
+body.enhanced .scene--light,body.enhanced .scene--paper2,body.enhanced .scene--dark{transition:background .5s var(--ease)}
