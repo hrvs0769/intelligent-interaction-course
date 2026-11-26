@@ -1,14 +1,12 @@
 /* ============================================================
    three.js loader
-   - three.min.js (~650KB) is loaded lazily, never on first paint.
-   - After first paint we load the tiny ambient field.
-   - Clicking a 3D exhibit loads the exhibit modules on demand.
+   - three.min.js is loaded only when a lecturer opens a 3D teaching exhibit.
+   - Nothing 3D is loaded on first paint.
    ============================================================ */
 (function () {
   "use strict";
 
   const CORE = "assets/js/vendor/three.min.js";
-  const AMBIENT = "assets/js/three-ambient.js";
   const EXHIBITS = ["assets/js/three-tower.js", "assets/js/three-exhibits.js"];
 
   let corePromise = null;
@@ -57,21 +55,4 @@
     toast("正在加载 3D 模块…", 1400);
   };
 
-  function startAmbient() {
-    ensureCore()
-      .then(() => loadOne(AMBIENT))
-      .then(() => window.initAmbient && window.initAmbient())
-      .catch(() => { /* decorative layer is optional */ });
-  }
-
-  function whenIdle(fn) {
-    if ("requestIdleCallback" in window) {
-      requestIdleCallback(fn, { timeout: 2500 });
-    } else {
-      setTimeout(fn, 900);
-    }
-  }
-
-  if (document.readyState === "complete") whenIdle(startAmbient);
-  else window.addEventListener("load", () => whenIdle(startAmbient), { once: true });
 })();

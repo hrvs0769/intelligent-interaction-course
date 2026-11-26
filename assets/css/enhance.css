@@ -5,18 +5,6 @@
    Loaded after styles.css
    ============================================================ */
 
-/* ---------- boot ---------- */
-#boot{position:fixed;inset:0;z-index:9999;background:#080b10;color:#f6f2e9;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .7s var(--ease),visibility .7s}
-#boot.is-done{opacity:0;visibility:hidden}
-#boot .mark{width:62px;height:62px;border:1px solid rgba(255,255,255,.5);display:grid;place-items:center;font-family:var(--mono);font-size:12px;letter-spacing:-.1em;position:relative}
-#boot .mark::before{content:"";position:absolute;inset:9px;border:1px solid rgba(255,255,255,.2)}
-#boot .name{font-family:var(--serif);font-size:28px;letter-spacing:-.03em}
-#boot .line{width:min(360px,60vw);height:1px;background:rgba(255,255,255,.16);position:relative;overflow:hidden}
-#boot .line i{display:block;height:100%;width:0;background:var(--orange);animation:bootLine 1.15s var(--ease) forwards}
-#boot small{font-family:var(--mono);font-size:8px;letter-spacing:.18em;color:rgba(255,255,255,.35)}
-@keyframes bootLine{to{width:100%}}
-
-/* ---------- cursor / ambient ---------- */
 @media (pointer:fine){
   body.enhanced{cursor:none}
   body.enhanced input,body.enhanced textarea{cursor:text}
@@ -28,9 +16,7 @@
 .cursor-ring.is-hot{width:58px;height:58px;border-color:rgba(141,227,242,.8);background:rgba(141,227,242,.06)}
 .cursor-ring.is-down{width:22px;height:22px;background:rgba(228,87,46,.15)}
 body.enhanced:hover .cursor-dot,body.enhanced:hover .cursor-ring{opacity:1}
-.ambient-glow{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(520px circle at var(--mx,50%) var(--my,30%),rgba(141,227,242,.075),transparent 64%);mix-blend-mode:screen;opacity:.9;transition:opacity .4s}
-body.is-light .ambient-glow{background:radial-gradient(520px circle at var(--mx,50%) var(--my,30%),rgba(228,87,46,.055),transparent 64%);mix-blend-mode:multiply;opacity:.8}
-body.enhanced::before{content:"";position:fixed;inset:0;z-index:9997;pointer-events:none;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
+body.is-light body.enhanced::before{content:"";position:fixed;inset:0;z-index:9997;pointer-events:none;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
 
 /* ---------- topbar / nav ---------- */
 body.enhanced .topbar{padding:12px clamp(16px,2.4vw,34px);border-bottom:1px solid rgba(36,71,107,.08)}
@@ -41,7 +27,6 @@ body.enhanced .brand:hover .brand-mark{transform:rotate(-8deg) scale(1.05);borde
 body.enhanced .nav-btn{position:relative;overflow:hidden;border-color:rgba(currentColor,.32);background:rgba(255,255,255,.06)}
 body.enhanced .nav-btn::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,.22),transparent);transform:translateX(-120%);transition:transform .5s var(--ease)}
 body.enhanced .nav-btn:hover::after{transform:translateX(120%)}
-body.enhanced .nav-btn:hover{background:var(--orange);border-color:var(--orange);color:#fff}
 .nav-btn.sound-on{border-color:var(--cyan)!important;color:var(--cyan)!important}
 
 /* ---------- scene rail ---------- */
@@ -191,9 +176,8 @@ body.enhanced .scene{padding-bottom:clamp(88px,10vh,120px)}
 @media(max-width:980px){body.enhanced .scene{padding-bottom:76px}}
 
 /* giant scene numbers as watermark */
-body.enhanced .scene::after{content:attr(data-num);position:absolute;right:clamp(10px,3.4vw,54px);top:clamp(72px,10vh,116px);font-family:var(--num);font-size:clamp(120px,20vw,320px);line-height:.68;color:rgba(23,23,21,.035);pointer-events:none;z-index:0;letter-spacing:-.06em}
 body.enhanced .scene--dark::after{color:rgba(255,255,255,.035)}
-@media(max-width:980px){body.enhanced .scene::after{font-size:clamp(90px,28vw,180px);top:80px;right:8px}}
+@media(max-width:980px){}
 
 /* numerals */
 body.enhanced .hero-index b{font-family:var(--num);font-weight:400;font-size:clamp(42px,5vw,74px);letter-spacing:.02em}
@@ -212,7 +196,6 @@ body.enhanced button,body.enhanced a,body.enhanced [role="button"],body.enhanced
 body.enhanced .topbar.is-scrolled,body.enhanced .topbar.on-dark.is-scrolled,body.enhanced .scene-dock,.cmdk,.case-modal{backdrop-filter:none!important}
 body.enhanced::before{display:none!important}
 body.enhanced .scene--light::before,body.enhanced .scene--paper2::before{animation:none!important}
-.ambient-glow,.cursor-dot,.cursor-ring{display:none!important}
 
 /* cleaner course map: no floating pseudo connectors */
 .tree-root::after,.tree-branches::before,.branch::before{display:none!important}
@@ -610,42 +593,15 @@ body.enhanced .homework.has-photo p{color:rgba(255,255,255,.92)}
 body.enhanced .homework.has-photo .next{color:rgba(255,255,255,.85);border-top-color:rgba(255,255,255,.24)}
 
 /* ============================================================
-   AMBIENT 3D + AESTHETIC UPGRADE (v1.4)
-   A soft three.js point field lives behind translucent scenes.
-   Decorative only: no pointer tracking, no layout change,
-   40fps cap, reduced-motion safe, toggle with A.
+   AESTHETIC CLEANUP
+   Only website elements that teach 智能交互与设计 are kept.
    ============================================================ */
-#ambientCanvas{position:fixed;inset:0;width:100vw;height:100vh;z-index:1;pointer-events:none;opacity:0;transition:opacity 1.4s var(--ease)}
-#ambientCanvas.is-ready{opacity:1}
-body.no-ambient #ambientCanvas{opacity:0!important}
-
-/* scenes become translucent windows onto the 3D field */
 body.enhanced .scene{position:relative;z-index:2}
-body.enhanced .scene--light{background:rgba(242,239,231,.80)}
-body.enhanced .scene--paper2{background:rgba(233,227,215,.80)}
-body.enhanced .scene--dark{background:rgba(8,11,16,.76)}
 
-/* a little more depth on persistent chrome */
 body.enhanced .topbar.is-scrolled{box-shadow:0 10px 40px rgba(16,20,26,.08)}
 body.enhanced .topbar.on-dark.is-scrolled{box-shadow:0 10px 40px rgba(0,0,0,.28)}
 body.enhanced .scene-dock{box-shadow:0 18px 60px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.12)}
 body.enhanced .scene-dock .num{text-shadow:0 0 18px rgba(228,87,46,.45)}
-body.enhanced .nav-btn:hover{box-shadow:0 0 0 1px rgba(141,227,242,.35),0 8px 24px rgba(141,227,242,.12)}
-
-/* quiet HUD corner marks on section headings */
-body.enhanced .section-head{position:relative}
-body.enhanced .section-head::after{
-  content:"";position:absolute;right:0;top:-14px;width:34px;height:34px;
-  border-top:1px solid rgba(228,87,46,.55);border-right:1px solid rgba(228,87,46,.55);
-  pointer-events:none;opacity:.75
-}
-body.enhanced .scene--dark .section-head::after{border-color:rgba(141,227,242,.5)}
-
-/* active card gets a subtle instrument glow, no tilt/magnetic motion */
-body.enhanced .flip-card:hover,body.enhanced .element-tile:hover,
-body.enhanced .chain-card:hover,body.enhanced .branch:hover{
-  box-shadow:0 0 0 1px rgba(141,227,242,.28),0 18px 50px rgba(16,20,26,.14)
-}
 
 /* theme skill badge on featured case cards */
 .case-skill{display:inline-block;margin:6px 0 0;padding:3px 7px;border:1px solid rgba(255,255,255,.35);background:rgba(228,87,46,.24);color:#ffd9cc;font-family:var(--mono);font-size:10px;letter-spacing:.08em}
@@ -655,7 +611,4 @@ body.enhanced .chain-card:hover,body.enhanced .branch:hover{
 
 /* Ambient switch must be perceptible: when off, scenes are fully opaque
    solid paper/dark; when on, translucent so the 3D field breathes through. */
-body.no-ambient.enhanced .scene--light{background:var(--paper)}
-body.no-ambient.enhanced .scene--paper2{background:var(--paper-2)}
-body.no-ambient.enhanced .scene--dark{background:var(--dark)}
-body.enhanced .scene--light,body.enhanced .scene--paper2,body.enhanced .scene--dark{transition:background .5s var(--ease)}
+body.enhanced .scene--light,body.enhanced .scene--paper2,

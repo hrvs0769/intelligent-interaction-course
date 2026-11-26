@@ -1,6 +1,5 @@
 /* ============================================================
-   Enhancements: boot, cursor, ambient, dock, command palette,
-   tilt, magnetic, split text, micro-interactions.
+   Enhancements: scene rail + dock, command palette, split text, ripple.
    ============================================================ */
 (function () {
   "use strict";
@@ -12,57 +11,6 @@
   const site = () => window.__site || {};
 
   document.body.classList.add("enhanced");
-
-  /* ---------- boot ---------- */
-  function boot() {
-    const el = document.createElement("div");
-    el.id = "boot";
-    el.innerHTML = '<div class="mark">MI</div><div class="name">智能交互与设计</div><div class="line"><i></i></div><small>MANUFACTURING AESTHETICS / INTERACTION / INDUSTRY</small>';
-    document.body.appendChild(el);
-    const hide = () => {
-      setTimeout(() => el.classList.add("is-done"), 650);
-      setTimeout(() => el.remove(), 1500);
-    };
-    if (document.readyState === "complete") hide();
-    else window.addEventListener("load", hide, { once: true });
-  }
-  boot();
-
-  /* ---------- cursor / ambient ---------- */
-  let dot, ring, glow;
-  let pointer = { x: innerWidth / 2, y: innerHeight / 2 };
-  let ringPos = { x: pointer.x, y: pointer.y };
-  function initCursor() {
-    dot = document.createElement("div");
-    dot.className = "cursor-dot";
-    ring = document.createElement("div");
-    ring.className = "cursor-ring";
-    glow = document.createElement("div");
-    glow.className = "ambient-glow";
-    document.body.append(glow, ring, dot);
-    if (!isFine || reduce) { dot.style.display = ring.style.display = "none"; }
-    document.addEventListener("mousemove", (e) => {
-      pointer.x = e.clientX;
-      pointer.y = e.clientY;
-      dot.style.transform = "translate(" + e.clientX + "px," + e.clientY + "px) translate(-50%,-50%)";
-      glow.style.setProperty("--mx", e.clientX + "px");
-      glow.style.setProperty("--my", e.clientY + "px");
-    }, { passive: true });
-    document.addEventListener("mousedown", () => ring.classList.add("is-down"));
-    document.addEventListener("mouseup", () => ring.classList.remove("is-down"));
-    document.addEventListener("mouseover", (e) => {
-      const hot = e.target.closest("a,button,[data-tilt],[data-magnetic],.case-card,.flip-card,.layer,.nav-btn,.btn");
-      ring.classList.toggle("is-hot", !!hot);
-    });
-    const loop = () => {
-      ringPos.x += (pointer.x - ringPos.x) * 0.16;
-      ringPos.y += (pointer.y - ringPos.y) * 0.16;
-      ring.style.transform = "translate(" + ringPos.x + "px," + ringPos.y + "px) translate(-50%,-50%)";
-      requestAnimationFrame(loop);
-    };
-    if (isFine && !reduce) loop();
-  }
-  /* cursor disabled for performance */
 
   /* ---------- scene rail + dock ---------- */
   function initNav() {
@@ -337,43 +285,6 @@
     closeCmdk();
     if (item.type === "scene") site().goTo?.(item.id);
     else site().openCase?.(item.id);
-  }
-
-  /* ---------- sound ---------- */
-  let audioCtx = null;
-  let soundOn = false;
-  function initSound() {
-    const nav = $(".topnav");
-    if (!nav) return;
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "nav-btn sound-toggle";
-    b.innerHTML = '<span class="dot"></span>音效';
-    b.addEventListener("click", () => {
-      soundOn = !soundOn;
-      b.classList.toggle("on", soundOn);
-      if (soundOn && !audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      if (soundOn) tone(520, 0.04, 0.03);
-      showToast(soundOn ? "音效已开启" : "音效已关闭");
-    });
-    nav.appendChild(b);
-    document.addEventListener("click", (e) => {
-      if (!soundOn) return;
-      if (e.target.closest("button,.btn,.nav-btn,.case-card,.flip-card")) tone(420, 0.03, 0.02);
-    });
-  }
-  function tone(freq, dur, gain) {
-    if (!audioCtx) return;
-    const o = audioCtx.createOscillator();
-    const g = audioCtx.createGain();
-    o.type = "triangle";
-    o.frequency.value = freq;
-    g.gain.value = gain;
-    o.connect(g);
-    g.connect(audioCtx.destination);
-    o.start();
-    g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + dur);
-    o.stop(audioCtx.currentTime + dur + 0.01);
   }
 
   /* ---------- toast ---------- */

@@ -25,7 +25,6 @@
     <button class="nav-btn" data-action="glossary">术语 <kbd>G</kbd></button>
     <button class="nav-btn" data-action="overview">总览 <kbd>O</kbd></button>
     <button class="nav-btn" data-action="notes">备注 <kbd>P</kbd></button>
-    <button class="nav-btn" data-action="ambient">3D 氛围 <kbd>A</kbd></button>
     <button class="nav-btn" data-action="fullscreen">全屏 <kbd>F</kbd></button>
   </nav>
 </header>
@@ -541,7 +540,6 @@
           <p class="body">形态在变、输入在变、状态在变、智能体开始替你执行。课堂精讲 5 个，完整案例库有 44 个。</p>
           <div style="display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin-top:12px">
             <button class="btn" data-action="library">打开完整案例库 →</button>
-            <button class="btn" data-action="corridor">打开 3D 案例走廊 →</button>
           </div>
         </div>
       </div>
@@ -834,29 +832,6 @@
         <p id="explodeBody">材料、工艺、CMF、交互影响。</p>
         <div class="tower-buttons" id="explodeButtons"></div>
         <div class="tower-note">这不是手机拆机课，而是让你看到：材料、结构、工艺、CMF 如何共同决定触感、折痕、重量和折叠手感。</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="tower-overlay" id="corridorOverlay" aria-hidden="true">
-  <div class="tower-shell">
-    <div class="tower-head">
-      <div><div class="mono">3D / CASE CORRIDOR</div><h2>2022–2026 案例走廊</h2></div>
-      <button class="tower-close" type="button" id="corridorClose">关闭 ESC</button>
-    </div>
-    <div class="tower-body">
-      <div class="tower-canvas-wrap">
-        <canvas id="corridorCanvas" style="width:100%;height:100%;display:block"></canvas>
-        <div class="tower-hint">拖动旋转 · 点击卡片 · 按钮打开详情</div>
-      </div>
-      <div class="tower-panel">
-        <div class="eyebrow">CASE CORRIDOR / 2022–2026</div>
-        <div class="tower-no" id="corridorNo">CASE</div>
-        <h1 id="corridorTitle">选择一张卡</h1>
-        <p id="corridorBody">拖动案例走廊，点击卡片查看它在课程里的位置。</p>
-        <button class="btn" id="corridorOpen" type="button" style="margin-top:24px;align-self:flex-start">打开案例详情 →</button>
-        <div class="tower-note">6 个精选案例悬浮在时间走廊中；完整 44 条案例在案例库里。</div>
       </div>
     </div>
   </div>
