@@ -229,12 +229,15 @@
     return '<div class="pattern"></div>';
   }
 
-  function featuredCard(c) {
-    return '<button class="case-card" type="button" data-case="' + esc(c.id) + '">' +
+  function featuredCard(c, order) {
+    const brief = c.usage === '略讲';
+    const label = brief ? '<span class="case-usage">略讲 · 一句话</span>' :
+      '<span class="case-usage case-usage--main">精讲 ' + String(order).padStart(2, '0') + '</span>';
+    return '<button class="case-card' + (brief ? ' is-brief' : '') + '" type="button" data-case="' + esc(c.id) + '">' +
       '<div class="case-art">' + caseArt(c) +
-      '<div class="meta"><span class="year">' + esc(c.year) + '</span><span class="cat">' + esc(c.category.split(" ")[0]) + '</span></div></div>' +
+      '<div class="meta"><span class="year">' + esc(c.year) + '</span><span class="cat">' + esc(c.category.split(" ")[0]) + '</span>' + label + '</div></div>' +
       '<div class="body"><h4>' + esc(c.name) + '</h4><p>' + esc(c.teaching) + '</p>' +
-      (c.skill ? '<div class="case-skill">' + esc(c.skill) + (c.usage === '略讲' ? '<em class="case-usage">略讲</em>' : '') + '</div>' : '') +
+      (c.skill ? '<div class="case-skill">' + esc(c.skill) + '</div>' : '') +
       '<div class="open">OPEN CASE →</div></div>' +
       '</button>';
   }
@@ -246,7 +249,12 @@
       const prefix = filter.split(" ")[0];
       list = list.filter(c => c.category.startsWith(prefix));
     }
-    grid.innerHTML = list.map(featuredCard).join("");
+    let mainCount = 0;
+    grid.innerHTML = list.map(c => {
+      const brief = c.usage === '略讲';
+      const order = brief ? 0 : ++mainCount;
+      return featuredCard(c, order);
+    }).join("");
   }
 
   function renderLibrary() {

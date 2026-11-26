@@ -675,3 +675,37 @@ body.enhanced .scene--light,body.enhanced .scene--paper2,
 .scene--dark .compare-note{font-size:12px;padding:9px 14px;margin-top:10px}
 .scene--dark .compare-row{padding:5px 0}
 .scene--dark .compare-col{padding:11px 16px}
+
+/* Scene 8: three-step transfer note under the mapping table */
+.transfer-note{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.transfer-step{border-left:2px solid var(--orange);padding:8px 12px;background:rgba(228,87,46,.045)}
+.transfer-step b{display:block;font-size:12px;color:var(--orange-ink);margin-bottom:4px}
+.transfer-step span{font-size:13px;line-height:1.6;color:var(--ink-soft)}
+@media(max-width:900px){.transfer-note{grid-template-columns:1fr}}
+
+/* Case wall: explicit teaching path — 5 精讲 in order + 1 略讲 flagged */
+.case-card .meta .case-usage{float:right;font-size:10px;font-family:var(--mono);letter-spacing:.04em;padding:2px 5px;border:1px solid rgba(255,255,255,.45);color:#ffd9cc;background:rgba(228,87,46,.35)}
+.case-card.is-brief .case-usage{border-style:dashed;background:rgba(255,255,255,.15);color:#fff}
+.case-card.is-brief{opacity:.9}
+
+/* Engineering-drawing annotation: teaches the manufacturing constraint
+   behind each interaction (Scene 3 only). Not used elsewhere. */
+.dwg-note{position:absolute;left:12px;bottom:10px;z-index:2;display:flex;align-items:center;gap:6px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:#fff;
+  text-shadow:0 1px 6px rgba(0,0,0,.8);pointer-events:none}
+.dwg-note i{display:block;width:9px;height:9px;border-left:1px solid var(--orange);border-bottom:1px solid var(--orange)}
+
+/* Case wall: after adding 精讲/略讲 labels, trim card height so the
+   second row clears the bottom dock (743px -> below 736px at 1280x800). */
+.case-card .case-art{height:150px}
+.case-card .body{padding:10px 12px}
+.case-card .case-skill{margin-top:3px;padding:2px 6px}
+.case-card .open{padding-top:4px}
+.case-card .body h4{margin-bottom:3px}
+
+/* Scene 7: cap case cards so two rows clear the dock at 1280x800. */
+.scene[data-scene="7"] .case-grid{grid-auto-rows:170px}
+.scene[data-scene="7"] .case-card{height:170px}
+.scene[data-scene="7"] .case-card .case-art{height:96px}
+.scene[data-scene="7"] .case-card .body{padding:8px 11px}
+.scene[data-scene="7"] .case-card .body p{font-size:12px;line-height:1.35}
