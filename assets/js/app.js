@@ -78,7 +78,6 @@
     $("#hudTitle").textContent = (window.COURSE && window.COURSE.title) || "智能交互与设计";
     const pct = scenes.length > 1 ? (state.index / (scenes.length - 1)) * 100 : 0;
     $("#progressFill").style.width = pct + "%";
-    updateNotes();
     window.dispatchEvent(new CustomEvent("course:scene", {
       detail: { index: state.index, dark: !!dark }
     }));
@@ -450,7 +449,12 @@
   /* ---------- glossary / overview ---------- */
   function renderGlossary() {
     $("#glossaryList").innerHTML = window.GLOSSARY.map(g =>
-      '<div class="glossary-item"><h3>' + esc(g.term) + '</h3><p>' + esc(g.def) + '</p></div>'
+      '<div class="glossary-item">' +
+        '<h3>' + esc(g.term) + '</h3>' +
+        (g.plain ? '<div class="glossary-plain"><span>大白话</span>' + esc(g.plain) + '</div>' : '') +
+        '<p class="glossary-def">' + esc(g.def) + '</p>' +
+        (g.eg ? '<div class="glossary-eg"><span>举个例子</span>' + esc(g.eg) + '</div>' : '') +
+      '</div>'
     ).join("");
   }
 
@@ -458,20 +462,6 @@
     $("#overviewGrid").innerHTML = scenes.map((s, i) =>
       '<button class="ov-card" type="button" data-scene-jump="' + i + '"><div class="n">' + String(i).padStart(2, "0") + '</div><h3>' + esc(s.dataset.title || "") + '</h3><p>' + (i === 0 ? "封面 / 课程标题" : "点击跳转") + '</p></button>'
     ).join("");
-  }
-
-  /* ---------- notes ---------- */
-  function updateNotes() {
-    const note = window.NOTES && window.NOTES[String(state.index)];
-    $("#notesScene").textContent = "SCENE " + String(state.index).padStart(2, "0") + " / " + (scenes[state.index]?.dataset.title || "");
-    $("#notesText").textContent = note || "暂无备注。";
-  }
-
-  function toggleNotes(force) {
-    const drawer = $("#notesDrawer");
-    const open = typeof force === "boolean" ? force : !drawer.classList.contains("is-open");
-    drawer.classList.toggle("is-open", open);
-    document.body.classList.toggle("is-locked", open);
   }
 
   /* ---------- overlays ---------- */
@@ -489,7 +479,6 @@
   function closeAllOverlays(unlock = true) {
     ["#libraryOverlay", "#glossaryOverlay", "#overviewOverlay"].forEach(id => $(id).classList.remove("is-open"));
     $("#caseModal").classList.remove("is-open");
-    $("#notesDrawer").classList.remove("is-open");
     if (unlock) document.body.classList.remove("is-locked");
   }
 
@@ -583,8 +572,6 @@
         if (a === "library") openOverlay("#libraryOverlay");
         if (a === "glossary") openOverlay("#glossaryOverlay");
         if (a === "overview") openOverlay("#overviewOverlay");
-        if (a === "notes") toggleNotes();
-        if (a === "notes-close") toggleNotes(false);
         if (a === "fullscreen") toggleFullscreen();
         if (a === "start") goTo(1);
         if (a === "tower") window.open3D && window.open3D("tower");
@@ -659,8 +646,6 @@
         e.preventDefault(); goTo(scenes.length - 1);
       } else if (k === "o" || k === "O") {
         e.preventDefault(); openOverlay("#overviewOverlay");
-      } else if (k === "p" || k === "P") {
-        e.preventDefault(); toggleNotes();
       } else if (k === "f" || k === "F") {
         e.preventDefault(); toggleFullscreen();
       } else if (k === "b" || k === "B") {
@@ -715,7 +700,6 @@
     closeAllOverlays,
     runDemo,
     showToast,
-    toggleNotes,
     toggleBlackout,
     get index() { return state.index; }
   };

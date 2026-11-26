@@ -477,14 +477,6 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:22px 0}
 .ov-card p{font-size:10.5px;line-height:1.5;color:rgba(245,241,232,.5);margin:0}
 
 /* notes drawer */
-.notes-drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);z-index:240;background:var(--paper);color:var(--ink);transform:translateX(102%);transition:transform .35s var(--ease);box-shadow:-20px 0 80px rgba(0,0,0,.2);display:flex;flex-direction:column}
-.notes-drawer.is-open{transform:none}
-.notes-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
-.notes-head h3{font-family:var(--serif);font-size:22px;margin:0;letter-spacing:-.02em}
-.notes-body{padding:18px 20px;overflow:auto;font-size:13px;line-height:1.75;color:var(--ink-soft)}
-.notes-body .k{font-family:var(--mono);font-size:8px;letter-spacing:.14em;color:var(--orange);text-transform:uppercase;margin-bottom:8px}
-.notes-close{border:1px solid var(--line-strong);background:transparent;padding:6px 9px;font-family:var(--mono);font-size:9px;cursor:pointer}
-
 /* blackout */
 .blackout{position:fixed;inset:0;z-index:300;background:#000;color:rgba(255,255,255,.5);display:none;align-items:center;justify-content:center;flex-direction:column;gap:16px}
 .blackout.is-open{display:flex}

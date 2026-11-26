@@ -465,8 +465,6 @@ body.enhanced .cmdk-item .k,body.enhanced .cmdk-item .s{font-size:11px}
 body.enhanced .cmdk-input{font-size:16px}
 body.enhanced .cmdk-head span,body.enhanced .cmdk-hint{font-size:11px}
 body.enhanced .ov-card p{font-size:12px}
-body.enhanced .notes-k,body.enhanced .notes-body .k{font-size:11px}
-body.enhanced .notes-body{font-size:14px}
 
 /* --- 3D overlay panels --- */
 body.enhanced .tower-head .mono{font-size:11px}
@@ -502,10 +500,9 @@ body.enhanced .cmdk-empty{color:rgba(245,241,232,.75)}
 body.enhanced .tower-overlay .eyebrow,
 body.enhanced .tower-overlay .case-label{color:#f0a58e}
 body.enhanced .tower-panel .eyebrow{color:#f0a58e}
-/* light case-sheet / notes drawer keep the dark orange */
+/* light case-sheet keeps the dark orange */
 body.enhanced .case-counter,
 body.enhanced .case-sheet__kicker{color:var(--ink-soft)}
-body.enhanced .notes-body .k{color:var(--orange-ink)}
 
 /* final small-text weight / overlay header */
 body.enhanced .lib-card .open{font-size:12px;font-weight:600}
@@ -728,3 +725,19 @@ body.enhanced .lens-card:hover,body.enhanced .element-tile:hover,body.enhanced .
 /* Fix clipped play badge on DUSTGUARD strip & hero title line-height */
 body.enhanced .dustguard-strip .play-badge{white-space:nowrap;font-size:11px;padding:3px 7px;line-height:1.2}
 body.enhanced .hero-title{line-height:1.02}
+
+/* DUSTGUARD cover: the strip had a fixed short height that clipped
+   the stats and CTA while leaving empty space below in the scene.
+   Let it size to its content and give the scene a taller hero. */
+body.enhanced .dustguard-strip{height:auto;min-height:260px;align-items:stretch}
+body.enhanced .dustguard-strip .shot{min-height:260px}
+body.enhanced .dustguard-strip .copy{padding:20px 22px}
+body.enhanced .dustguard-strip .mini-stats{margin-top:14px;gap:26px}
+body.enhanced .dustguard-strip .mini-stats b{font-size:20px}
+body.enhanced .dustguard-strip .btn{margin-top:14px!important}
+
+/* Glossary: plain-language first, formal definition second, example third */
+.glossary-plain{font-size:15px;line-height:1.6;color:#f6f2e9;margin:10px 0 8px;padding-left:12px;border-left:2px solid var(--orange)}
+.glossary-plain span,.glossary-eg span{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:#f0a58e;margin-right:8px}
+.glossary-def{font-size:13px;line-height:1.65;color:rgba(245,241,232,.82);margin:0 0 8px}
+.glossary-eg{font-size:13px;line-height:1.6;color:rgba(245,241,232,.72);padding-top:8px;border-top:1px dashed rgba(255,255,255,.18)}
